@@ -1,3 +1,3 @@
-import TweetInput from 'components/Main/TweetInput'
+import MainContent from 'components/Main/MainContent'
 
-export { TweetInput }
+export { MainContent } 
