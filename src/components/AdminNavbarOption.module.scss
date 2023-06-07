@@ -1,0 +1,18 @@
+.navbarOption {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-top: 40px;
+  padding: 10px;
+}
+
+.navbarOption > h2 {
+  font-weight: 700;
+  font-size: 18px;
+  padding-left: 1rem;
+}
+
+.navbarOption:hover {
+  background-color: #e8f5fe;
+  transition: all 0.1 ease-out;
+}
