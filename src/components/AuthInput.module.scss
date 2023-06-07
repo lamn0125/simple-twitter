@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.AuthInputContainer {
+  background-color: #f5f8fa;
+  width: 100%;
+  height: 54px;
+  border-bottom: 1px #000 solid;
+  margin: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding: 10px;
+  justify-content: space-around;
+}
+
+.label {
+  color: #696974;
+}
+
+.input {
+  border: none;
+  padding-top: 8px;
+  height: 54px;
+  background-color: transparent;
+  font-size: 1rem;
+}
