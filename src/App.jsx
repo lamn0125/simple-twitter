@@ -1,16 +1,16 @@
-import React from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import {
   RegisterPage,
   UserLoginPage,
   AdminLoginPage,
   AdminTweetPage,
-} from './pages'
+} from 'pages'
 
 function App() {
+  const basename = process.env.PUBLIC_URL;
   return (
     <div className="app">
-    <BrowserRouter>
+    <BrowserRouter basename={basename}>
       <Routes>
          <Route path="login" element={<UserLoginPage />} />
          <Route path="register" element={<RegisterPage />} />

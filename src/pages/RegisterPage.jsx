@@ -1,5 +1,5 @@
-import AuthInput from 'components/AuthInput/AuthInput.jsx'
-import style from '../UserLoginPage/UserLoginPage.module.scss'
+import AuthInput from 'components/AuthInput.jsx'
+import style from './UserLoginPage.module.scss'
 import { useContext, useEffect, useState } from 'react'
 import logo from 'icons/logo.svg'
 import { Link } from 'react-router-dom'

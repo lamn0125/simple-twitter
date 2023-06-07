@@ -1,11 +1,11 @@
-import AuthInput from 'components/AuthInput/AuthInput.jsx'
+import AuthInput from 'components/AuthInput.jsx'
 import style from './UserLoginPage.module.scss'
 import { useContext, useEffect, useState } from 'react'
 import logo from 'icons/logo.svg'
 import { Link } from 'react-router-dom'
 import Swal from 'sweetalert2';
 
-function Admin() {
+function AdminLoginPage() {
   const [account, setAccount] = useState('');
   const [password, setPassword] = useState('');
 
@@ -51,4 +51,4 @@ function Admin() {
   )
 }
 
-export default Admin
+export default AdminLoginPage

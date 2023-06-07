@@ -1,10 +1,10 @@
-import React from 'react'
+
 import logo from 'icons/logo.svg'
 import HomeIcon from 'icons/HomeIcon.svg'
-import UserIcon from '/icons/UserIcon.svg'
+import UserIcon from 'icons/UserIcon.svg'
 import Logout from 'icons/Logout.svg'
 import style from './AdminNavbar.module.scss'
-import AdminNavbarOption from '../AdminNavbarOption/AdminNavbarOption'
+import AdminNavbarOption from './AdminNavbarOption'
 
 function AdminNavbar() {
     return (

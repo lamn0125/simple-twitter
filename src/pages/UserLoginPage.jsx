@@ -1,4 +1,4 @@
-import AuthInput from 'components/AuthInput/AuthInput.jsx'
+import AuthInput from 'components/AuthInput.jsx'
 import { useContext, useEffect, useState } from 'react'
 import logo from 'icons/logo.svg'
 import { Link } from 'react-router-dom'

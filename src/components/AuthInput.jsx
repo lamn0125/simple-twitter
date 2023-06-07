@@ -1,4 +1,3 @@
-import React from 'react'
 import style from './AuthInput.module.scss'
 
 function AuthInput({ label, type, value, placeholder, onChange }) {
