@@ -15,20 +15,40 @@ function RegisterPage() {
   function handleSubmit(e){
     e.preventDefault();
     if (
-      account.length === 0 ||
-      name.length === 0 ||
-      email.length === 0 ||
-      password.length === 0 ||
-      recheckPassword.length === 0 ||
-      password !== recheckPassword
+      !account.trim() ||
+      !name.trim()||
+      !email.trim() ||
+      !password.trim() ||
+      !recheckPassword.trim()
     )
     {
+      Swal.fire({
+        position: 'top',
+        title: '內容不得空白',
+        timer: 1500,
+        icon: 'error',
+        showConfirmButton: false,
+      });
+      return
+    }
+    if (account.length > 50 || name.length > 50) {
+      return;
+    }
+    if(password !== recheckPassword) {
+      Swal.fire({
+        position: 'top',
+        title: '密碼不一致',
+        timer: 1500,
+        icon: 'error',
+        showConfirmButton: false,
+      });
       return
     }
 
     //串接api
     console.log(account,name, email, password, recheckPassword)
-
+    // 註冊成功
+    // 註冊失敗
   }
 
   return (

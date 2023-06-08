@@ -4,7 +4,6 @@ import style from './Setting.module.scss'
 import { useState } from 'react'
 import Swal from 'sweetalert2';
 import { useNavigate } from 'react-router-dom'
-import { Button } from 'react-bootstrap';
 
 function Setting() {
 
@@ -57,15 +56,24 @@ function Setting() {
     }
 
     if(editPassword !== editRecheckPassword){
-      console.log('Password must be the same')
+      Swal.fire({
+        position: 'top',
+        title: '密碼不一致',
+        timer: 1500,
+        icon: 'error',
+        showConfirmButton: false,
+      });
       return
     }
-
     //串API修改資料
     console.log(editUserInfo)
-    //跳出更新成功提示 1.5秒
+
+    //更新成功
     //強制登出導向user login page
     // navigate('/login')
+
+
+    //更新失敗
   }
 
   return (

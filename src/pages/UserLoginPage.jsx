@@ -11,11 +11,20 @@ function UserLoginPage() {
 
   function handleSubmit(e) {
     e.preventDefault();
-    if (account.length === 0 || password.length === 0) {
-      return;
+    if (
+      !account.trim() ||
+      !password.trim()
+    )
+    {
+      Swal.fire({
+        position: 'top',
+        title: '內容不得空白',
+        timer: 1500,
+        icon: 'error',
+        showConfirmButton: false,
+      });
+      return
     }
-    console.log(account, password)
-    console.log('submitted!')
   }
 
 
