@@ -1,0 +1,15 @@
+.tweetPageContainer {
+  height: 100vh;
+  display: flex;
+  padding: 0 10%;
+  overflow-y: scroll;
+  .tweetPageMain {
+    flex: 0.7;
+    border-right: 1px solid #e6ecf0;
+
+    .tweetPageMain__title {
+      padding: 24px 0 24px 20px;
+      border-bottom: 1px solid #e6ecf0;
+    }
+  }
+}

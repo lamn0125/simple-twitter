@@ -1,0 +1,57 @@
+.userItem__card {
+  position: relative;
+  width: 210px;
+  .userItem__card_avatar {
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 10;
+    top: 20%;
+  }
+  .userItem__card_body {
+    background-color: #f6f7f8;
+    padding: 32px 0 24px 0;
+    height: 100%px;
+    .userItem__card_info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .userItem__card_name {
+        font-weight: 700;
+        font-size: 1rem;
+        text-align: center;
+        margin-bottom: 0.3rem;
+      }
+      .userItem__card_detail {
+        margin-bottom: 1rem;
+        font-size: 14px;
+        color: #6c757d;
+      }
+    }
+  }
+}
+
+.userItem_card_iconsContainer {
+  display: flex;
+  gap: 1rem;
+  .userItem_card_number {
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    .userItem_card_icon {
+      margin-right: 8px;
+    }
+  }
+}
+
+.userItem__card_followContainer {
+  display: flex;
+  font-size: 14px;
+  gap: 1rem;
+  color: #6c757d;
+  margin-top: 1rem;
+  .userItem__card_count {
+    color: #000;
+  }
+}

@@ -1,7 +1,7 @@
 import AuthInput from 'components/AuthInput.jsx'
 import style from './UserLoginPage.module.scss'
 import { useContext, useEffect, useState } from 'react'
-import logo from 'icons/logo.svg'
+import logo from 'assets/icons/logo.svg'
 import { Link } from 'react-router-dom'
 import Swal from 'sweetalert2';
 
@@ -19,12 +19,13 @@ function RegisterPage() {
       name.length === 0 ||
       email.length === 0 ||
       password.length === 0 ||
-      recheckPassword.length === 0
+      recheckPassword.length === 0 ||
+      password !== recheckPassword
     )
     {
       return
     }
-      console.log('submitted!')
+      console.log(account,name, email, password, recheckPassword)
 
   }
   return (
@@ -36,45 +37,50 @@ function RegisterPage() {
           label="帳號"
           type="text"
           value={account}
+          name={account}
           placeholder="請輸入帳號"
-          onChange={(accountValue) => {
-            setAccount(accountValue)
+          onChange={(e) => {
+            setAccount(e.target.value)
           }}
           />
         <AuthInput
           label="名稱"
           type="text"
           value={name}
+          name={name}
           placeholder="請輸入使用者名稱"
-          onChange={(nameValue) => {
-            setName(nameValue)
+          onChange={(e) => {
+            setName(e.target.value)
           }}
         />
         <AuthInput
           label="Email"
           type="email"
           value={email}
+          name={email}
           placeholder="請輸入Email"
-          onChange={(emailValue) => {
-            setEmail(emailValue)
+          onChange={(e) => {
+            setEmail(e.target.value)
           }}
         />
         <AuthInput
           label="密碼"
           type="password"
           value={password}
+          name={password}
           placeholder="請設定密碼"
-          onChange={(passwordValue) => {
-            setPassword(passwordValue)
+          onChange={(e) => {
+            setPassword(e.target.value)
           }}
         />
         <AuthInput
           label="密碼確認"
           type="password"
           value={recheckPassword}
+          name={recheckPassword}
           placeholder="請再次輸入密碼"
-          onChange={(recheckPasswordValue) => {
-            setRecheckPassword(recheckPasswordValue)
+          onChange={(e) => {
+            setRecheckPassword(e.target.value)
           }}
         />
         <button  className={style.btn}>註冊</button>

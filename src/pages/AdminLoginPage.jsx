@@ -1,7 +1,7 @@
 import AuthInput from 'components/AuthInput.jsx'
 import style from './UserLoginPage.module.scss'
 import { useContext, useEffect, useState } from 'react'
-import logo from 'icons/logo.svg'
+import logo from 'assets/icons/logo.svg'
 import { Link } from 'react-router-dom'
 import Swal from 'sweetalert2';
 
@@ -14,7 +14,6 @@ function AdminLoginPage() {
     if (account.length === 0 || password.length === 0) {
       return;
     }
-    console.log('submitted!')
   }
 
   return (
@@ -27,8 +26,8 @@ function AdminLoginPage() {
           type="text"
           value={account}
           placeholder="請輸入帳號"
-          onChange={(accountValue) => {
-            setAccount(accountValue)
+          onChange={(e) => {
+            setAccount(e.target.value)
           }}
           />
         <AuthInput
@@ -36,8 +35,8 @@ function AdminLoginPage() {
           type="password"
           value=""
           placeholder="請輸入密碼"
-          onChange={(passwordValue) => {
-            setPassword(passwordValue)
+          onChange={(e) => {
+            setPassword(e.target.value)
           }}
         />
         <button className={style.btn}>登入</button>

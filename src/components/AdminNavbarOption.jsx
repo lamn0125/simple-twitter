@@ -1,11 +1,14 @@
 import style from './AdminNavbarOption.module.scss'
+import {useState} from 'react'
+
+function AdminNavbarOption({active, image, text, onClick}) {
 
 
-function AdminNavbarOption({active, image, text}) {
+
   return (
-    <div className={style.navbarOption}>
+    <div className={style.navbarOption} onClick={(e) => onClick(text)}>
       <img src={image} alt="" />
-      <h2>{text}</h2>
+      <h2 className={active ? `${style.navbarOption__title_active}` : `${style.navbarOption__title}`}>{text}</h2>
     </div>
   )
 }
