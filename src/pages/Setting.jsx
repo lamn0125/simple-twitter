@@ -37,7 +37,13 @@ function Setting() {
     } = editUserInfo
 
     if(!editAccount.trim() || !editName.trim() || !editEmail.trim() || !editPassword.trim() || !editRecheckPassword.trim()){
-      console.log('All blank must be filled')
+      Swal.fire({
+        position: 'top',
+        title: '內容不得空白',
+        timer: 1500,
+        icon: 'error',
+        showConfirmButton: false,
+      });
       return
     }
 

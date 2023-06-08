@@ -25,9 +25,12 @@ function RegisterPage() {
     {
       return
     }
-      console.log(account,name, email, password, recheckPassword)
+
+    //串接api
+    console.log(account,name, email, password, recheckPassword)
 
   }
+
   return (
     <div className={style.form}>
       <img src={logo} alt="" />
