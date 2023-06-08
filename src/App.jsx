@@ -3,20 +3,19 @@ import './App.scss';
 import 'styles/main.scss';
 import { UserNavbar } from 'components/Layout'
 import { MainContent } from 'components/Main'
-import { Container, Row, Col } from 'react-bootstrap'
 
 function App() {
   return (
-    <Container>
-      <Row>
-        <Col md={4}>
+    <div className="container">
+      <div className="row">
+        <div className="col-md-3 col-lg-3">
           <UserNavbar />
-        </Col>
-        <Col md={4}>
+        </div>
+        <div className="col-md-6 col-lg-6">
           <MainContent />
-        </Col>
-      </Row>
-    </Container>
+        </div>
+      </div>
+    </div>
   )
 }
 
