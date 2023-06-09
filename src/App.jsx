@@ -11,7 +11,7 @@ function App() {
         <div className="col-md-3 col-lg-3">
           <UserNavbar />
         </div>
-        <div className="col-md-6 col-lg-6">
+        <div className="col-md-7 col-lg-7 main-border p-0">
           <MainContent />
         </div>
       </div>

@@ -16,29 +16,29 @@ const UserNavbar = () => {
         <ul className="navbarNav">
           <li className={styles.navItem}>
             <a className={`${styles.navLink} d-flex`} href="/">
-              <ActiveHome class="mx-2" />
-              <p class="active">首頁</p>
+              <ActiveHome className="mx-2" />
+              <h5 className="active">首頁</h5>
             </a>
           </li>
           <li className={styles.navItem} href="/">
             <a className={`${styles.navLink} d-flex`} href="/">
-              <User class="mx-2" />
-              <p>個人資料</p>
+              <User className="mx-2" />
+              <h5>個人資料</h5>
             </a> 
           </li>
           <li className={styles.navItem} href="/">
             <a className={`${styles.navLink} d-flex`} href="/">
-              <Setting class="mx-2" />
-              <p>設定</p>
+              <Setting className="mx-2" />
+              <h5>設定</h5>
             </a>   
           </li>
-          <button className="btnInput">推文</button>
+          <button className="tweet-btn">推文</button>
         </ul>
 
         <div className={styles.logoutContainer}>
           <a className={`${styles.navLink} d-flex mb-3`} href="/">
-            <Logout class="mx-2" />
-            <p>登出</p>
+            <Logout className="mx-2" />
+            <h5>登出</h5>
           </a>
         </div>
       </div> 

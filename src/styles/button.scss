@@ -1,8 +1,32 @@
-.btnInput {
+.tweet-btn {
   padding: 15px 69px; 
   font-size: 20px;
   border: 0;
   border-radius: 50px;
   color: #FFFFFF;
   background: #FF6600;
+}
+
+.tweet-sm-btn {
+  padding: 8px 16px;
+  background: #FF6600;
+  border-radius: 50px;
+  color: #FFFFFF;
+}
+
+.tweet-btn,
+.tweet-sm-btn {
+  transition: all .3s;
+  &:hover {
+    color: #FFFFFF;
+    background: #FF974A;     
+  }
+}
+
+.reply-icon,
+.like-icon {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 14px;
+  color: #6C757D;
 }
