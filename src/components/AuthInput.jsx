@@ -1,12 +1,16 @@
 import style from './AuthInput.module.scss'
 
-
-const AuthInput = ({ label, type, value, name, placeholder, onChange, errorMsg}) => {
+const AuthInput = ({ label, type, value, name, placeholder, onChange, currentPage}) => {
 
   let nameLengthTooLong,
       accountLengthTooLong,
       emailInValid,
-      tweetContentTooLong = null;
+      tweetContentTooLong,
+      showCountNum = null;
+
+  if (currentPage === 'editProfile'){
+    showCountNum = true
+  }
 
   if (label === '名稱' && value) {
     if (value.length > 50) {
@@ -31,6 +35,7 @@ const AuthInput = ({ label, type, value, name, placeholder, onChange, errorMsg})
     }
   }
 
+
   return (
     <div className={style.AuthInputContainer}>
       <div className={style.AuthInputContainer_input}>
@@ -40,12 +45,19 @@ const AuthInput = ({ label, type, value, name, placeholder, onChange, errorMsg})
         <input
         className={style.input}
           type={type || 'text'}
-          vale={value}
+          value={value}
           name={name}
           placeholder={placeholder}
           onChange={(e) => onChange(e)}
         />
+
       </div>
+
+      {showCountNum && (
+        <div className={style.countNumber}> {value.length}/50</div>
+      )}
+
+
       <div>
         {nameLengthTooLong && (
           <div className={style.AuthInputContainer_errorMsg}>字數超出上限！</div>
@@ -63,6 +75,7 @@ const AuthInput = ({ label, type, value, name, placeholder, onChange, errorMsg})
         {/* {isBlank && (
           <div className={style.AuthInputContainer_errorMsg}>Empty!!</div>
         )} */}
+
       </div>
   </div>
 

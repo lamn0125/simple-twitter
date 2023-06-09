@@ -1,0 +1,83 @@
+.userSelfContainer {
+  height: 100vh;
+  display: flex;
+  padding: 0 10%;
+  overflow-y: scroll;
+}
+
+.userSelfMain {
+  flex: 0.6;
+  border-right: 1px solid #e6ecf0;
+}
+
+.userSelfTitle {
+  display: flex;
+  gap: 1rem;
+  padding: 8px 28px;
+  .userSelfTitleBtn {
+    cursor: pointer;
+  }
+  .userSelfTitle_name {
+    font-weight: 700;
+    font-size: 18px;
+    .userSelfTitle_postCount {
+      color: #6c757d;
+      font-weight: 400;
+      font-size: 13px;
+    }
+  }
+}
+
+.userSelfContent {
+  width: 100%;
+  height: 200px;
+  position: relative;
+  // border: 1px rgb(0, 108, 52) solid;
+  .userSelfContent_Bg {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+  }
+  .userSelfContent_Avatar {
+    position: absolute;
+    top: 75%;
+    left: 1rem;
+  }
+}
+.userSelfContent__EditBtn_Container {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1rem;
+  .userSelfContent__EditBtn {
+    width: 150px;
+    height: 40px;
+    border: 1px solid #ff6600;
+    border-radius: 50px;
+    background-color: transparent;
+    margin-left: auto;
+    padding: 8px 16px;
+    color: #ff6600;
+  }
+}
+
+.userSelfContent_Info {
+  padding-left: 16px;
+  .userSelfContent_Info_name {
+    font-weight: 700;
+    font-size: 18px;
+  }
+  .userSelfContent_Info_detail {
+    font-size: 14px;
+    color: #6c757d;
+  }
+  .userSelfContent_desc_followContainer {
+    display: flex;
+    gap: 20px;
+    .userSelfContent_desc_count {
+      color: #171725;
+    }
+    .userSelfContent_desc_text {
+      color: #6c757d;
+    }
+  }
+}

@@ -4,6 +4,7 @@ import AdminLoginPage from './AdminLoginPage';
 import AdminTweetListPage from './AdminTweetListPage';
 import AdminUserListPage from './AdminUserListPage'
 import Setting from './Setting'
+import UserSelfPage from './UserSelfPage'
 
 export {
   UserLoginPage,
@@ -11,5 +12,6 @@ export {
   AdminLoginPage,
   AdminTweetListPage,
   AdminUserListPage,
-  Setting
+  Setting,
+  UserSelfPage
 };

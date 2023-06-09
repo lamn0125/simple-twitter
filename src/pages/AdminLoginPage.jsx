@@ -44,7 +44,7 @@ function AdminLoginPage() {
         <AuthInput
           label="密碼"
           type="password"
-          value=""
+          value={password}
           placeholder="請輸入密碼"
           onChange={(e) => {
             setPassword(e.target.value)

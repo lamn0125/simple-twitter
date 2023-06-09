@@ -1,28 +1,21 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-.AuthInputContainer {
-  height: auto;
+.TextareaContainer {
+  height: 147px;
   margin: 1rem 0;
   position: relative;
 }
 
-.AuthInputContainer_input {
+.TextareaContainer_input {
   background-color: #f5f8fa;
   padding: 8px;
   width: 100%;
-  height: 60px;
+  height: 100%;
   border-bottom: 1px #000 solid;
   display: flex;
   flex-direction: column;
   text-align: left;
-  justify-content: space-around;
 }
 
-.AuthInputContainer_errorMsg {
+.TextareaContainer_errorMsg {
   border-top: 2px red solid;
   text-align: left;
   width: 100%;
@@ -40,13 +33,15 @@
 .input {
   border: none;
   padding-top: 8px;
-  height: 54px;
+  height: 100%;
   background-color: transparent;
   font-size: 1rem;
+  resize: none;
   &:focus {
     outline: none;
   }
 }
+
 .countNumber {
   position: absolute;
   top: 100%;

@@ -6,7 +6,8 @@ import {
   AdminLoginPage,
   AdminTweetListPage,
   AdminUserListPage,
-  Setting
+  Setting,
+  UserSelfPage
 } from 'pages'
 
 function App() {
@@ -15,12 +16,13 @@ function App() {
     <div className={style.app}>
     <BrowserRouter basename={basename}>
       <Routes>
-         <Route path="login" element={<UserLoginPage />} />
-         <Route path="register" element={<RegisterPage />} />
-         <Route path="admin" element={<AdminLoginPage />} />
-         <Route path="admin/tweets" element={<AdminTweetListPage />} />
-         <Route path="admin/users" element={<AdminUserListPage />} />
+        <Route path="login" element={<UserLoginPage />} />
+        <Route path="register" element={<RegisterPage />} />
+        <Route path="admin" element={<AdminLoginPage />} />
+        <Route path="admin/tweets" element={<AdminTweetListPage />} />
+        <Route path="admin/users" element={<AdminUserListPage />} />
         <Route path="setting" element={<Setting />} />
+        <Route path="user/self" element={<UserSelfPage />} />
       </Routes>
     </BrowserRouter>
     </div>
