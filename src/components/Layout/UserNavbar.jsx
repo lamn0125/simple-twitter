@@ -9,7 +9,7 @@ import styles from 'components/Layout/UserNavbar.module.scss'
 const UserNavbar = () => {
   return(
     <nav className={styles.navbar}>
-      <a className="navbar-brand" href="/">
+      <a className="navbar-brand mb-3" href="/">
         <img src={Logo} alt="avatar" />
       </a>
       <div className={styles.navContainer}>
@@ -27,12 +27,12 @@ const UserNavbar = () => {
             </a> 
           </li>
           <li className={styles.navItem} href="/">
-            <a className={`${styles.navLink} d-flex`} href="/">
+            <a className={`${styles.navLink} d-flex mb-4`} href="/">
               <Setting className="mx-2" />
               <h5>設定</h5>
             </a>   
           </li>
-          <button className="tweet-btn">推文</button>
+          <button className="btn tweet-btn btn-brand col">推文</button>
         </ul>
 
         <div className={styles.logoutContainer}>

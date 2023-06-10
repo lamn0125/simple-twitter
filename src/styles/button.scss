@@ -1,7 +1,8 @@
 .tweet-btn {
-  padding: 15px 69px; 
+  padding: 8px 24px; 
+  font-weight: 400;
   font-size: 20px;
-  border: 0;
+  line-height: 30px;
   border-radius: 50px;
   color: #FFFFFF;
   background: #FF6600;
@@ -9,13 +10,43 @@
 
 .tweet-sm-btn {
   padding: 8px 16px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
   background: #FF6600;
   border-radius: 50px;
   color: #FFFFFF;
 }
 
-.tweet-btn,
-.tweet-sm-btn {
+.following-btn {
+  padding: 8px 14px;
+  height: 40px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  background: #FF6600;
+  border-radius: 50px;
+  color: #FFFFFF;
+}
+
+.follow-btn {
+  padding: 8px 16px;
+  height: 40px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  border: 1px solid #FF6600;
+  background: #FFFFFF;
+  border-radius: 50px;
+  color: #FF6600;
+  transition: all .3s;
+  &:hover {
+    color: #FFFFFF;
+    background: #FF6600;
+  }
+}
+
+.btn-brand {
   transition: all .3s;
   &:hover {
     color: #FFFFFF;

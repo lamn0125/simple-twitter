@@ -5,9 +5,9 @@ import TweetCollection from 'components/Main/TweetCollection'
 const MainContent = () => {
   return(
     <div>
-      <Header/>
-      <TweetInput/>
-      <TweetCollection/>
+      <Header />
+      <TweetInput />
+      <TweetCollection />
     </div>
   )
 }

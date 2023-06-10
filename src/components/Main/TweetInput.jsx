@@ -1,8 +1,9 @@
 import UserAvatar from 'assets/images/Photo@1x.svg'
+import styles from 'components/Main/MainContent.module.scss'
 
 const TweetInput = () => {
   return(
-    <div className="container-fluid py-3 px-4 input-container">
+    <div className={`${styles.inputContainer} container-fluid py-3 px-4`}>
       <div className="row">
         <div className="col-md d-flex align-items-center mb-3">
           <img src={UserAvatar} alt="avatar" />
@@ -11,7 +12,7 @@ const TweetInput = () => {
       </div>
       <div className="row">
         <div className="col-md d-flex justify-content-md-end">
-          <button className="btn tweet-sm-btn">推文</button>
+          <button className="btn tweet-sm-btn btn-brand">推文</button>
         </div>
       </div>
     </div>
