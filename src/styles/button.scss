@@ -61,3 +61,11 @@
   line-height: 14px;
   color: #6C757D;
 }
+
+.reply-btn {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  .btn:nth-child(1) {
+    margin-right: 102px;
+  }
+}

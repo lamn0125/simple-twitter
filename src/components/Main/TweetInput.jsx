@@ -1,21 +1,18 @@
 import UserAvatar from 'assets/images/Photo@1x.svg'
-import styles from 'components/Main/MainContent.module.scss'
 
 const TweetInput = () => {
   return(
-    <div className={`${styles.inputContainer} container-fluid py-3 px-4`}>
-      <div className="row">
-        <div className="col-md d-flex align-items-center mb-3">
-          <img src={UserAvatar} alt="avatar" />
-          <h5 className="ml-2 text-secondary">有什麼新鮮事？</h5>
-        </div>
-      </div>
-      <div className="row">
-        <div className="col-md d-flex justify-content-md-end">
+    <div className="input-border d-flex py-3 px-4">
+      <a href="/">
+        <img src={UserAvatar} alt="avatar" />
+      </a> 
+      <div className="w-100">
+        <h5 className="ml-2 py-3 text-secondary">有什麼新鮮事？</h5> 
+        <div className="d-flex justify-content-end">
           <button className="btn tweet-sm-btn btn-brand">推文</button>
-        </div>
-      </div>
-    </div>
+        </div>     
+      </div>    
+    </div> 
   )
 }
 

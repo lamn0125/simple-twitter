@@ -13,7 +13,7 @@ const PopularList = () => {
                 <img src={OtherUserAvatar} alt="avatar" />
               </a>
               <div className="ml-2">
-                <a href="/" className="fz-base-bold dark-100 mr-2">Pizza Hut</a>
+                <a href="/" className="account-name fz-base-bold mr-2">Pizza Hut</a>
                 <div className="fz-sm text-secondary">@pizzahut</div>
               </div>
             </div>             
@@ -25,7 +25,7 @@ const PopularList = () => {
                 <img src={OtherUserAvatar} alt="avatar" />
               </a>
               <div className="ml-2">
-                <a href="/" className="fz-base-bold dark-100 mr-2">McDon ...</a>
+                <a href="/" className="account-name fz-base-bold mr-2">McDon ...</a>
                 <div className="fz-sm text-secondary">@McDona ...</div>
               </div>
             </div>             
@@ -37,7 +37,7 @@ const PopularList = () => {
                 <img src={OtherUserAvatar} alt="avatar" />
               </a>
               <div className="ml-2">
-                <a href="/" className="fz-base-bold dark-100 mr-2">Bank of ...</a>
+                <a href="/" className="account-name fz-base-bold mr-2">Bank of ...</a>
                 <div className="fz-sm text-secondary">@BankOfA ...</div>
               </div>
             </div>             
@@ -49,7 +49,7 @@ const PopularList = () => {
                 <img src={OtherUserAvatar} alt="avatar" />
               </a>
               <div className="ml-2">
-                <a href="/" className="fz-base-bold dark-100 mr-2">L'Oréal</a>
+                <a href="/" className="account-name fz-base-bold mr-2">L'Oréal</a>
                 <div className="fz-sm text-secondary">@Loreal</div>
               </div>
             </div>             
@@ -61,7 +61,7 @@ const PopularList = () => {
                 <img src={OtherUserAvatar} alt="avatar" />
               </a>
               <div className="ml-2">
-                <a href="/" className="fz-base-bold dark-100 mr-2">Nintendo</a>
+                <a href="/" className="account-name fz-base-bold mr-2">Nintendo</a>
                 <div className="fz-sm text-secondary">@Nintendo</div>
               </div>
             </div>             
@@ -73,7 +73,7 @@ const PopularList = () => {
                 <img src={OtherUserAvatar} alt="avatar" />
               </a>
               <div className="ml-2">
-                <a href="/" className="fz-base-bold dark-100 mr-2">MasterCard</a>
+                <a href="/" className="account-name fz-base-bold mr-2">MasterCard</a>
                 <div className="fz-sm text-secondary">@MasterCard</div>
               </div>
             </div>             
@@ -85,7 +85,7 @@ const PopularList = () => {
                 <img src={OtherUserAvatar} alt="avatar" />
               </a>
               <div className="ml-2">
-                <a href="/" className="fz-base-bold dark-100 mr-2">Nike</a>
+                <a href="/" className="account-name fz-base-bold mr-2">Nike</a>
                 <div className="fz-sm text-secondary">@Nike</div>
               </div>
             </div>             
@@ -97,7 +97,7 @@ const PopularList = () => {
                 <img src={OtherUserAvatar} alt="avatar" />
               </a>
               <div className="ml-2">
-                <a href="/" className="fz-base-bold dark-100 mr-2">Adidas</a>
+                <a href="/" className="account-name fz-base-bold mr-2">Adidas</a>
                 <div className="fz-sm text-secondary">@adidas</div>
               </div>
             </div>             

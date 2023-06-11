@@ -84,6 +84,22 @@ a:hover {
   color: #FF6600;
 }
 
+.account-name {
+  color: #171725;
+  &:hover {
+    color: #171725;
+    text-decoration: underline;
+  }
+}
+
+.tag {
+  color: #FF6600;
+  &:hover {
+    color: #FF6600;
+    text-decoration: underline;
+  }
+}
+
 .text-secondary {
   color: #6C757D;
 }
