@@ -15,8 +15,9 @@ const TweetInput = ({ isModalShow, handleShow, handleClose }) => {
             <Button className="btn tweet-sm-btn btn-brand" onClick={handleShow}>推文</Button>
           </div>     
         </div>    
+      </div> 
 
-        <Modal show={isModalShow} onHide={handleClose}>
+      <Modal show={isModalShow} onHide={handleClose}>
         <Modal.Header>
           <Modal.Title>Modal title</Modal.Title>
             <CloseIcon className="cursor-pointer"
@@ -32,9 +33,6 @@ const TweetInput = ({ isModalShow, handleShow, handleClose }) => {
           <Button variant="secondary" onClick={handleClose}>Close</Button>
         </Modal.Footer>
       </Modal>
-      </div> 
-
-      
     </>
   )
 }

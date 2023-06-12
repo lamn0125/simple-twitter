@@ -13,7 +13,7 @@ const ReplyItem = () => {
           <div className="card-body p-0">
             <div className="card-title mb-2">
               <a href="/" className="account-name fz-base-bold mr-2">Devon Lane</a>
-              <span className="fz-sm text-secondary">@apple．3小時</span>
+              <span className="fz-sm text-secondary">@devon_lane．12小時</span>
             </div>
              
             <div className="">

@@ -1,10 +1,8 @@
 import { useState } from 'react'
 import { UserNavbar, PopularList } from 'components/Layout'
-import { MainContent } from 'components/Main'
-import { TweetContent } from 'components/TweetContent'
+import TweetContent from 'components/TweetContent/TweetContent'
 
-const MainController = () => {
-  // 控制Modal視窗是否顯示
+const TweetContentPage = () => {
   const [show, setShow] = useState(false)
   const handleShow = () => setShow(true)
   const handleClose = () => setShow(false)
@@ -20,11 +18,6 @@ const MainController = () => {
           />
         </div>
         <div className="main-container">
-          <MainContent
-            isModalShow={show}
-            handleShow={handleShow}
-            handleClose={handleClose}
-          />
           <TweetContent 
             isModalShow={show}
             handleShow={handleShow}
@@ -39,4 +32,4 @@ const MainController = () => {
   )
 }
 
-export default MainController
+export default TweetContentPage
