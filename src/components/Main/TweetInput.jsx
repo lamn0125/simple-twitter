@@ -1,14 +1,8 @@
-import { useState } from 'react'
 import { Button, Modal } from 'react-bootstrap'
 import UserAvatar from 'assets/images/Photo@1x.svg'
 import { ReactComponent as CloseIcon } from 'assets/icons/icon_tweet_xs_close@x1.svg'
 
-const TweetInput = () => {
-  // 使用React useState Hook來控制Modal視窗是否顯示
-  const [show, setShow] = useState(false)
-  const handleClose = () => setShow(false)
-  const handleShow = () => setShow(true)
-
+const TweetInput = ({ isModalShow, handleShow, handleClose }) => {
   return(
     <>
       <div className="input-border d-flex py-3 px-4">
@@ -23,7 +17,7 @@ const TweetInput = () => {
         </div>    
       </div> 
 
-      <Modal show={show} onHide={handleClose}>
+      <Modal show={isModalShow} onHide={handleClose}>
         <Modal.Header>
           <Modal.Title>Modal title</Modal.Title>
             <CloseIcon className="cursor-pointer"
