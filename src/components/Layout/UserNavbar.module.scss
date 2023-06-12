@@ -1,8 +1,11 @@
 .navLink {
   padding-top: 20px;
   padding-bottom: 20px;
-  color: #44444F;
+  color: var(--dark-90);
+  &:last-child{
+    padding-bottom: 16px;
+  }
   &:hover {
-    color: #44444F;
+    color: var(--dark-90);
   }
 }

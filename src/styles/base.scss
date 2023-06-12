@@ -1,13 +1,39 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
 body {
-  font-family: 'Noto Sans TC','Montserrat';
+  font-family: 'Noto Sans TC', 'Montserrat', 'Arial', 'Helvetica', 'Verdana', 'sans-serif';
   font-style: normal;
-  color: #171725;
+  color: var(--dark-100);
 }
 
-.cursor-pointer {
-  cursor: pointer;
+:root {
+  --main: #FF6600;
+
+  --primary: #0062FF;
+  --secondary: #6C757D;
+  --success: #3DD598;
+  --warning: #FFC542;
+  --error: #FC5A5A;
+
+  --orange: #FF974A;
+  --blue: #50B5FF;
+  --green: #82C43C;
+  --purple: #A461D8;
+  --pink: #FF9AD5;
+
+  --dark-100: #171725;
+  --dark-90: #44444F;
+  --dark-80: #696974;
+  --dark-70: #92929D;
+  --dark-60: #B5B5BE;
+  --dark-50: #D5D5DC;
+  --dark-40: #E2E2EA;
+  --dark-30: #F1F1F5;
+  --dark-20: #FAFAFB;
+  --dark-0: #FFFFFF;
+
+  --main-gray: #657786;
+  --border-gray: #E6ECF0;
 }
 
 h1 {
@@ -76,38 +102,34 @@ h5 {
   line-height: 20px;
 }
 
+.bg-dark-20 {
+  background-color: var(--dark-20);
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
 a:hover {
   text-decoration: none;
 }
 
 .active {
-  color: #FF6600;
+  color: var(--main);
 }
 
 .account-name {
-  color: #171725;
+  color: var(--dark-100);
   &:hover {
-    color: #171725;
+    color: var(--dark-100);
     text-decoration: underline;
   }
 }
 
 .tag {
-  color: #FF6600;
+  color: var(--main);
   &:hover {
-    color: #FF6600;
+    color: var(--main);
     text-decoration: underline;
   }
-}
-
-.text-secondary {
-  color: #6C757D;
-}
-
-.dark-20 {
-  background-color: #FAFAFB;
-}
-
-.dark-100 {
-  color: #171725;
 }

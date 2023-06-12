@@ -4,10 +4,10 @@ import styles from 'components/Layout/PopularList.module.scss'
 const PopularList = () => {
   return(
     <div className={`${styles.card} border-0`}>
-      <h4 className={`${styles.cardHeadr} dark-20 p-4`}>推薦跟隨</h4>
-      <div className={`${styles.cardBody} dark-20 px-3`}>
-        <ul className="list-group list-group-flush dark-20">
-          <li className="list-group-item d-flex justify-content-between align-items-center py-3 px-0 dark-20 border-0 ">
+      <h4 className={`${styles.cardHeadr} bg-dark-20 p-4`}>推薦跟隨</h4>
+      <div className={`${styles.cardBody} bg-dark-20 px-3`}>
+        <ul className="list-group list-group-flush">
+          <li className="list-group-item d-flex justify-content-between align-items-center py-3 px-0 bg-dark-20 border-0 ">
             <div className="d-flex">
               <a href="/">
                 <img src={OtherUserAvatar} alt="avatar" />
@@ -19,7 +19,7 @@ const PopularList = () => {
             </div>             
             <button className="btn following-btn btn-brand">正在跟隨</button>
           </li>
-          <li className="list-group-item d-flex justify-content-between align-items-center py-3 px-0 dark-20 border-0">
+          <li className="list-group-item d-flex justify-content-between align-items-center py-3 px-0 bg-dark-20 border-0">
             <div className="d-flex">
               <a href="/">
                 <img src={OtherUserAvatar} alt="avatar" />
@@ -31,7 +31,7 @@ const PopularList = () => {
             </div>             
             <button className="btn following-btn btn-brand">正在跟隨</button>
           </li>
-          <li className="list-group-item d-flex justify-content-between align-items-center py-3 px-0 dark-20 border-0">
+          <li className="list-group-item d-flex justify-content-between align-items-center py-3 px-0 bg-dark-20 border-0">
             <div className="d-flex">
               <a href="/">
                 <img src={OtherUserAvatar} alt="avatar" />
@@ -43,7 +43,7 @@ const PopularList = () => {
             </div>             
             <button className="btn follow-btn">跟隨</button>
           </li>
-          <li className="list-group-item d-flex justify-content-between align-items-center py-3 px-0 dark-20 border-0">
+          <li className="list-group-item d-flex justify-content-between align-items-center py-3 px-0 bg-dark-20 border-0">
             <div className="d-flex">
               <a href="/">
                 <img src={OtherUserAvatar} alt="avatar" />
@@ -55,7 +55,7 @@ const PopularList = () => {
             </div>             
             <button className="btn follow-btn">跟隨</button>
           </li>
-          <li className="list-group-item d-flex justify-content-between align-items-center py-3 px-0 dark-20 border-0">
+          <li className="list-group-item d-flex justify-content-between align-items-center py-3 px-0 bg-dark-20 border-0">
             <div className="d-flex">
               <a href="/">
                 <img src={OtherUserAvatar} alt="avatar" />
@@ -67,7 +67,7 @@ const PopularList = () => {
             </div>             
             <button className="btn follow-btn">跟隨</button>
           </li>
-          <li className="list-group-item d-flex justify-content-between align-items-center py-3 px-0 dark-20 border-0">
+          <li className="list-group-item d-flex justify-content-between align-items-center py-3 px-0 bg-dark-20 border-0">
             <div className="d-flex">
               <a href="/">
                 <img src={OtherUserAvatar} alt="avatar" />
@@ -79,7 +79,7 @@ const PopularList = () => {
             </div>             
             <button className="btn follow-btn">跟隨</button>
           </li>
-          <li className="list-group-item d-flex justify-content-between align-items-center py-3 px-0 dark-20 border-0">
+          <li className="list-group-item d-flex justify-content-between align-items-center py-3 px-0 bg-dark-20 border-0">
             <div className="d-flex">
               <a href="/">
                 <img src={OtherUserAvatar} alt="avatar" />
@@ -91,7 +91,7 @@ const PopularList = () => {
             </div>             
             <button className="btn follow-btn">跟隨</button>
           </li>
-          <li className="list-group-item d-flex justify-content-between align-items-center py-3 px-0 dark-20 border-0">
+          <li className="list-group-item d-flex justify-content-between align-items-center py-3 px-0 bg-dark-20 border-0">
             <div className="d-flex">
               <a href="/">
                 <img src={OtherUserAvatar} alt="avatar" />

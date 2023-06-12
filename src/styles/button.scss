@@ -4,8 +4,8 @@
   font-size: 20px;
   line-height: 30px;
   border-radius: 50px;
-  color: #FFFFFF;
-  background: #FF6600;
+  color: var(--dark-0);
+  background-color: var(--main);
 }
 
 .tweet-sm-btn {
@@ -13,9 +13,10 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-  background: #FF6600;
+  border: 0;
   border-radius: 50px;
-  color: #FFFFFF;
+  color: var(--dark-0);
+  background-color: var(--main);
 }
 
 .following-btn {
@@ -24,9 +25,9 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-  background: #FF6600;
   border-radius: 50px;
-  color: #FFFFFF;
+  color: var(--dark-0);
+  background-color: var(--main);
 }
 
 .follow-btn {
@@ -35,23 +36,37 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-  border: 1px solid #FF6600;
-  background: #FFFFFF;
+  border: 1px solid var(--main);
   border-radius: 50px;
-  color: #FF6600;
+  color: var(--main);
+  background-color: var(--dark-0);
   transition: all .3s;
   &:hover {
-    color: #FFFFFF;
-    background: #FF6600;
+    color: var(--dark-0);
+    background-color: var(--main);
   }
 }
 
-.btn-brand {
+.btn.btn-brand {
   transition: all .3s;
   &:hover {
-    color: #FFFFFF;
-    background: #FF974A;     
+    color: var(--dark-0);
+    background-color: var(--orange);     
   }
+  &:focus {
+    box-shadow: none;
+    color: var(--dark-0);
+    background-color: var(--main); 
+  }
+}
+
+.btn-primary:not(:disabled):not(.disabled):active,
+.btn-primary:not(:disabled):not(.disabled).active,
+.show>.btn-primary.dropdown-toggle {
+  border: 0;
+  box-shadow: none;
+  color: var(--dark-0);
+  background-color: var(--main); 
 }
 
 .reply-icon,
@@ -59,13 +74,13 @@
   font-weight: 600;
   font-size: 14px;
   line-height: 14px;
-  color: #6C757D;
+  color: var(--secondary);
 }
 
 .reply-btn {
   padding-top: 12px;
   padding-bottom: 12px;
-  .btn:nth-child(1) {
+  .btn:first-child {
     margin-right: 102px;
   }
 }

@@ -38,7 +38,7 @@ const UserNavbar = () => {
         </div> 
       </nav>
       <div className={styles.logoutContainer}>
-        <a className={`${styles.navLink} d-flex mb-3`} href="/">
+        <a className={`${styles.navLink} d-flex`} href="/">
           <Logout className="mx-2" />
           <h5>登出</h5>
         </a>
