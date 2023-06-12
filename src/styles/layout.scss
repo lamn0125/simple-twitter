@@ -3,7 +3,8 @@
   border-bottom: 10px solid var(--border-gray);
 }
 
-.main-border {
+.main-container {
+  width: 641px;
   border-left: 1px solid var(--border-gray);
   border-right: 1px solid var(--border-gray);
 }
@@ -21,4 +22,21 @@
 .list-group-flush > .list-group-item:last-child {
   border-bottom-width: thin;
   border-color: var(--border-gray);
+}
+
+.nav-container {
+  width: 178px;
+  height: 100vh;
+}
+
+.modal-backdrop.show {
+  opacity: 0.2;
+}
+.modal-dialog {
+  max-width: 634px;
+  top: 25px;
+  right: 55px;
+}
+.modal-content {
+  border-radius: 14px;
 }

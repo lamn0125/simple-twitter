@@ -4,7 +4,7 @@ import TweetCollection from 'components/Main/TweetCollection'
 
 const MainContent = ({ isModalShow, handleShow, handleClose }) => {
   return(
-    <div>
+    <>
       <Header />
       <TweetInput 
         isModalShow={isModalShow}
@@ -12,7 +12,7 @@ const MainContent = ({ isModalShow, handleShow, handleClose }) => {
         handleClose={handleClose}
       />
       <TweetCollection />
-    </div>
+    </>
   )
 }
 

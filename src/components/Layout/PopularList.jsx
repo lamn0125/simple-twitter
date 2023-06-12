@@ -3,7 +3,7 @@ import styles from 'components/Layout/PopularList.module.scss'
 
 const PopularList = () => {
   return(
-    <div className={`${styles.card} border-0`}>
+    <div className={`${styles.card} border-0 mt-3`}>
       <h4 className={`${styles.cardHeadr} bg-dark-20 p-4`}>推薦跟隨</h4>
       <div className={`${styles.cardBody} bg-dark-20 px-3`}>
         <ul className="list-group list-group-flush">

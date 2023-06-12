@@ -11,15 +11,15 @@ const MainController = () => {
 
   return(
     <div className="container">
-      <div className="row">
-        <div className="col-md-2 col-lg-2 d-flex flex-column justify-content-between pl-0 pr-4">
+      <div className="d-flex">
+        <div className="nav-container d-flex flex-column justify-content-between pr-4">
           <UserNavbar 
             isModalShow={show}
             handleShow={handleShow}
             handleClose={handleClose}
           />
         </div>
-        <div className="main-border col-md-7 col-lg-7 p-0">
+        <div className="main-container">
           <MainContent
             isModalShow={show}
             handleShow={handleShow}
@@ -31,7 +31,7 @@ const MainController = () => {
             handleClose={handleClose}
           />
         </div>
-        <div className="col-md-3 col-lg-3 mt-3 pr-0 pl-4">
+        <div className="pl-4">
           <PopularList />
         </div>
       </div>
