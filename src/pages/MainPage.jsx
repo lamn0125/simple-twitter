@@ -1,34 +1,46 @@
 import { useState } from 'react'
 import { UserNavbar, PopularList } from 'components/Layout'
+import { TweetModal, ReplyModal }  from 'components/Modal'
 import MainContent from 'components/Main/MainContent'
 
 const MainPage = () => {
-  // 控制Modal視窗是否顯示
-  const [show, setShow] = useState(false)
-  const handleShow = () => setShow(true)
-  const handleClose = () => setShow(false)
+  /// TweetModal視窗顯示
+  const [tweetModalShow, setTweetModalShow] = useState(false)
+  const handleTweetModalShow = () => setTweetModalShow(true)
+  const handleTweetModalClose = () => setTweetModalShow(false)
+
+  // ReplyModal視窗顯示
+  const [replyModalShow, setReplyModalShow] = useState(false)
+  const handleReplyModalShow = () => setReplyModalShow(true)
+  const handleReplyModalClose = () => setReplyModalShow(false)
 
   return(
     <div className="container">
       <div className="d-flex">
         <div className="nav-container d-flex flex-column justify-content-between pr-4">
           <UserNavbar 
-            isModalShow={show}
-            handleShow={handleShow}
-            handleClose={handleClose}
+            handleTweetModalShow={handleTweetModalShow}
           />
         </div>
         <div className="main-container">
           <MainContent
-            isModalShow={show}
-            handleShow={handleShow}
-            handleClose={handleClose}
+            handleTweetModalShow={handleTweetModalShow}
+            handleReplyModalShow={handleReplyModalShow}
           />
         </div>
         <div className="pl-4">
           <PopularList />
         </div>
       </div>
+
+      <TweetModal 
+        isModalShow={tweetModalShow}
+        handleClose={handleTweetModalClose}
+      />
+      <ReplyModal 
+        isModalShow={replyModalShow}
+        handleClose={handleReplyModalClose}
+      />
     </div>
   )
 }

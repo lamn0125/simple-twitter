@@ -30,23 +30,62 @@
   height: 100vh;
 }
 
+
 // modal
 .modal-backdrop.show {
   opacity: 0.2;
 }
+
 .modal-dialog {
   max-width: 634px;
   top: 23px;
   right: 60px;
+
+  @media (max-width: 1199px) {
+    max-width: 490px;
+    right: 77px;
+  }
+  
+  .modal-content {
+    border-radius: 14px;
+  }
 }
-.modal-content {
-  border-radius: 14px;
+
+.modal-body {
+  padding: 1rem 1.5rem;
+  height: 187px;
+
+  .form-control {
+    height: 187px;
+    resize: none;
+    padding-top: 1rem;
+    padding-left: 0.5rem;
+    border: 0;
+
+    &:focus {
+      box-shadow: none;
+    }
+
+    @media (max-width: 1199px) {
+      height: 160px;
+    }
+  }
 }
+
+input::placeholder {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  color: #6C757D;
+}
+
+.modal-footer {
+  border-top: 0;
+}
+
 
 // tab
 .nav-tabs {
-  // margin-bottom: 0 !important;
-
   .nav-item {
     flex: none;
     

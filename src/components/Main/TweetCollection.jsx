@@ -1,9 +1,11 @@
 import TweetItem from 'components/Main/TweetItem'
 
-const TweetCollection = () => {
+const TweetCollection = ({ handleReplyModalShow }) => {
   return(
     <div>
-      <TweetItem/>
+      <TweetItem
+        handleReplyModalShow={handleReplyModalShow}
+      />
     </div>
   )
 }

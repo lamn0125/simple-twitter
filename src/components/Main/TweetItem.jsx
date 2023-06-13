@@ -2,7 +2,7 @@ import OtherUserAvatar from 'assets/images/img@1x.svg'
 import { ReactComponent as ReplyIcon} from 'assets/icons/icon_tweet_xs_outlined_reply@1x.svg'
 import { ReactComponent as LikeIcon } from 'assets/icons/icon_tweet_xs_outlined_like@1x.svg'
 
-const TweetItem = () => {
+const TweetItem = ({ handleReplyModalShow }) => {
   return(
     <ul className="list-group list-group-flush">
       <li className="list-group-item py-3 px-4 cursor-pointer">
@@ -21,7 +21,7 @@ const TweetItem = () => {
               Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis ullamco cillum dolor. Voluptate exercitation incididunt aliquip deserunt reprehenderit elit laborum.
             </div>
             <div className="btn-group">
-              <button className="btn p-0 mr-3">
+              <button className="btn p-0 mr-3" onClick={handleReplyModalShow}>
                 <ReplyIcon className="text-secondary" />
                 <span className="reply-icon ml-2">
                   13
@@ -53,7 +53,7 @@ const TweetItem = () => {
               Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis ullamco cillum dolor. Voluptate exercitation incididunt aliquip deserunt reprehenderit elit laborum.
             </div>
             <div className="btn-group">
-              <button className="btn p-0 mr-3">
+              <button className="btn p-0 mr-3" onClick={handleReplyModalShow}>
                 <ReplyIcon className="text-secondary" />
                 <span className="reply-icon ml-2">
                   13
@@ -85,7 +85,7 @@ const TweetItem = () => {
               Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis ullamco cillum dolor. Voluptate exercitation incididunt aliquip deserunt reprehenderit elit laborum.
             </div>
             <div className="btn-group">
-              <button className="btn p-0 mr-3">
+              <button className="btn p-0 mr-3" onClick={handleReplyModalShow}>
                 <ReplyIcon className="text-secondary" />
                 <span className="reply-icon ml-2">
                   13
@@ -117,7 +117,7 @@ const TweetItem = () => {
                 Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis ullamco cillum dolor. Voluptate exercitation incididunt aliquip deserunt reprehenderit elit laborum.
               </div>
               <div className="btn-group">
-                <button className="btn p-0 mr-3">
+                <button className="btn p-0 mr-3" onClick={handleReplyModalShow}>
                   <ReplyIcon className="text-secondary" />
                   <span className="reply-icon ml-2">
                     13
@@ -149,7 +149,7 @@ const TweetItem = () => {
                 Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis ullamco cillum dolor. Voluptate exercitation incididunt aliquip deserunt reprehenderit elit laborum.
               </div>
               <div className="btn-group">
-                <button className="btn p-0 mr-3">
+                <button className="btn p-0 mr-3" onClick={handleReplyModalShow}>
                   <ReplyIcon className="text-secondary" />
                   <span className="reply-icon ml-2">
                     13
@@ -181,7 +181,7 @@ const TweetItem = () => {
                 Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis ullamco cillum dolor. Voluptate exercitation incididunt aliquip deserunt reprehenderit elit laborum.
               </div>
               <div className="btn-group">
-                <button className="btn p-0 mr-3">
+                <button className="btn p-0 mr-3" onClick={handleReplyModalShow}>
                   <ReplyIcon className="text-secondary" />
                   <span className="reply-icon ml-2">
                     13

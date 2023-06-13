@@ -159,7 +159,7 @@ const FeatureList = () => {
                   <span className="fz-sm text-secondary">@apple．3小時</span>
                 </div>
                 
-                <div className="">
+                <div>
                   <div className="mb-2">            
                     <span className="fz-sm text-secondary mr-1">回覆</span>
                     <a href="/" className="tag fz-sm">@apple</a>
@@ -184,7 +184,7 @@ const FeatureList = () => {
                   <span className="fz-sm text-secondary">@apple・3 小時</span>
                 </div>
                 
-                <div className="">
+                <div>
                   <div className="mb-2">            
                     <span className="fz-sm text-secondary mr-1">回覆</span>
                     <a href="/" className="tag fz-sm">@apple</a>
@@ -209,7 +209,7 @@ const FeatureList = () => {
                   <span className="fz-sm text-secondary">@apple・3 小時</span>
                 </div>
                 
-                <div className="">
+                <div>
                   <div className="mb-2">            
                     <span className="fz-sm text-secondary mr-1">回覆</span>
                     <a href="/" className="tag fz-sm">@apple</a>
@@ -234,7 +234,7 @@ const FeatureList = () => {
                   <span className="fz-sm text-secondary">@apple・3 小時</span>
                 </div>
                 
-                <div className="">
+                <div>
                   <div className="mb-2">            
                     <span className="fz-sm text-secondary mr-1">回覆</span>
                     <a href="/" className="tag fz-sm">@apple</a>
@@ -259,7 +259,7 @@ const FeatureList = () => {
                   <span className="fz-sm text-secondary">@JaneCoooo・3 小時</span>
                 </div>
                 
-                <div className="">
+                <div>
                   <div className="mb-2">            
                     <span className="fz-sm text-secondary mr-1">回覆</span>
                     <a href="/" className="tag fz-sm">@apple</a>

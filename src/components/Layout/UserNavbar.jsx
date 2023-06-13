@@ -1,6 +1,4 @@
-// import { useState } from 'react'
-import { Button, Modal } from 'react-bootstrap'
-import { ReactComponent as CloseIcon } from 'assets/icons/icon_tweet_xs_close@x1.svg'
+import { Button } from 'react-bootstrap'
 import Logo from 'assets/images/logo@1x.svg'
 import { ReactComponent as ActiveHome } from 'assets/icons/icon_filled_home@1x.svg'
 import { ReactComponent as User } from 'assets/icons/Property 2=outlined, Property 3=user@1x.svg'
@@ -8,7 +6,7 @@ import { ReactComponent as Setting } from 'assets/icons/Property 2=outlined, Pro
 import { ReactComponent as Logout } from 'assets/icons/Property 2=outlined, Property 3=logout@1x.svg'
 import styles from 'components/Layout/UserNavbar.module.scss'
 
-const UserNavbar = ({ isModalShow, handleShow, handleClose }) => {
+const UserNavbar = ({ handleTweetModalShow }) => {
   return(
     <>    
       <nav className="d-flex flex-column">
@@ -36,7 +34,7 @@ const UserNavbar = ({ isModalShow, handleShow, handleClose }) => {
               </a>   
             </li>  
           </ul>
-          <button className="btn tweet-btn btn-brand col mt-1" onClick={handleShow}>推文</button>
+          <Button className="btn tweet-btn btn-brand col mt-1" onClick={handleTweetModalShow}>推文</Button>
         </div> 
       </nav>
       <div className={styles.logoutContainer}>
@@ -45,23 +43,6 @@ const UserNavbar = ({ isModalShow, handleShow, handleClose }) => {
           <h5>登出</h5>
         </a>
       </div>
-
-      <Modal show={isModalShow} onHide={handleClose}>
-        <Modal.Header>
-          <Modal.Title>Modal title</Modal.Title>
-            <CloseIcon className="cursor-pointer"
-              onClick={handleClose} 
-            />  
-        </Modal.Header>
-
-        <Modal.Body>
-          <p>Modal body text goes here.</p>
-        </Modal.Body>
-
-        <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>Close</Button>
-        </Modal.Footer>
-      </Modal>
     </>
   )
 }

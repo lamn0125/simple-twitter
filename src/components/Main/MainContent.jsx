@@ -2,16 +2,18 @@ import Header from 'components/Main/Header'
 import TweetInput from 'components/Main/TweetInput'
 import TweetCollection from 'components/Main/TweetCollection'
 
-const MainContent = ({ isModalShow, handleShow, handleClose }) => {
+const MainContent = ({ handleTweetModalShow, handleReplyModalShow }) => {
   return(
     <>
       <Header />
       <TweetInput 
-        isModalShow={isModalShow}
-        handleShow={handleShow}
-        handleClose={handleClose}
+        // isModalShow={isModalShow}
+        handleTweetModalShow={handleTweetModalShow}
+        // handleClose={handleClose}
       />
-      <TweetCollection />
+      <TweetCollection 
+        handleReplyModalShow={handleReplyModalShow}
+      />
     </>
   )
 }

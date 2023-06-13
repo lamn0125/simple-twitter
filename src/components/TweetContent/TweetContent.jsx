@@ -2,14 +2,12 @@ import Header from 'components/TweetContent/Header'
 import TweetPost from 'components/TweetContent/TweetPost'
 import ReplyCollection from 'components/TweetContent/ReplyCollection'
 
-const TweetContent = ({ isModalShow, handleShow, handleClose }) => {
+const TweetContent = ({ handleReplyModalShow }) => {
   return(
     <div>
       <Header />
       <TweetPost 
-        isModalShow={isModalShow}
-        handleShow={handleShow}
-        handleClose={handleClose}
+        handleReplyModalShow={handleReplyModalShow}
       />
       <ReplyCollection />
     </div>
