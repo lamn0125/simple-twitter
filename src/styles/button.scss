@@ -1,3 +1,4 @@
+// tweet input
 .tweet-btn {
   padding: 8px 24px; 
   font-weight: 400;
@@ -47,6 +48,7 @@
   }
 }
 
+// main style
 .btn-brand {
   transition: all .3s;
   &:hover {
@@ -65,6 +67,7 @@
   }
 }
 
+// tweet
 .reply-icon,
 .like-icon {
   font-weight: 600;
@@ -73,6 +76,7 @@
   color: var(--secondary);
 }
 
+// reply
 .reply-btn {
   padding-top: 12px;
   padding-bottom: 12px;

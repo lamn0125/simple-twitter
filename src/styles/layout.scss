@@ -1,3 +1,4 @@
+// border
 .input-border {
   border-top: 1px solid var(--border-gray);
   border-bottom: 10px solid var(--border-gray);
@@ -29,14 +30,52 @@
   height: 100vh;
 }
 
+// modal
 .modal-backdrop.show {
   opacity: 0.2;
 }
 .modal-dialog {
   max-width: 634px;
-  top: 25px;
-  right: 55px;
+  top: 23px;
+  right: 60px;
 }
 .modal-content {
   border-radius: 14px;
+}
+
+// tab
+.nav-tabs {
+  // margin-bottom: 0 !important;
+
+  .nav-item {
+    flex: none;
+    
+    &:nth-child(3) {
+      .nav-link {
+        padding-left: 28px;
+        padding-right: 28px;
+      }  
+    }
+    .nav-link {
+      padding: 15px 50px;
+      font-weight: 700;
+      font-size: 15px;
+      line-height: 22px;
+      border: 0;
+      color: var(--main-gray);
+      background-color: transparent;
+  
+      &.active {
+        border: 0;
+        color: var(--main);
+        border-bottom: 2px solid var(--main);
+      }
+    }
+  }
+}
+
+.tab-content {
+  .card-text {
+    color: var(--dark-100);
+  }
 }
