@@ -1,0 +1,110 @@
+// tweet input
+.tweet-btn {
+  padding: 8px 24px; 
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  border: 0;
+  border-radius: 50px;
+  color: var(--dark-0);
+  background-color: var(--main);
+}
+
+.tweet-sm-btn {
+  padding: 8px 16px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  border: 0;
+  border-radius: 50px;
+  color: var(--dark-0);
+  background-color: var(--main);
+}
+
+.following-btn {
+  padding: 8px 14px;
+  height: 40px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  border-radius: 50px;
+  color: var(--dark-0);
+  background-color: var(--main);
+}
+
+.follow-btn {
+  padding: 8px 16px;
+  height: 40px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  border: 1px solid var(--main);
+  border-radius: 50px;
+  color: var(--main);
+  background-color: var(--dark-0);
+  transition: all .3s;
+  &:hover {
+    color: var(--dark-0);
+    background-color: var(--main);
+  }
+}
+
+// main style
+.btn-brand {
+  transition: all .3s;
+
+  &:hover {
+    color: var(--dark-0);
+    background-color: var(--orange);     
+  }
+
+  &:focus {
+    box-shadow: none;
+    color: var(--dark-0);
+    background-color: var(--main); 
+  }
+  
+  &:active {
+    box-shadow: none !important;
+    color: var(--dark-0);
+    background-color: var(--main) !important;
+  }
+}
+
+// tweet
+.reply-icon,
+.like-icon {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 14px;
+  color: var(--secondary);
+}
+
+// reply
+.reply-btn {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  .btn:first-child {
+    margin-right: 102px;
+  }
+
+  button {
+    background-color: transparent;
+    border: 0;
+
+    &:hover {
+      background-color: transparent;
+    }
+
+    &:focus {
+      box-shadow: none !important;
+      background-color: transparent !important;
+    }
+
+    &:active {
+      box-shadow: none !important;
+      background-color: transparent !important;
+    }
+  }
+}
+

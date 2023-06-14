@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+body {
+  font-family: 'Noto Sans TC', 'Montserrat', 'Arial', 'Helvetica', 'Verdana', 'sans-serif';
+  font-style: normal;
+  color: var(--dark-100);
+}
+
+:root {
+  --main: #FF6600;
+
+  --primary: #0062FF;
+  --secondary: #6C757D;
+  --success: #3DD598;
+  --warning: #FFC542;
+  --error: #FC5A5A;
+
+  --orange: #FF974A;
+  --blue: #50B5FF;
+  --green: #82C43C;
+  --purple: #A461D8;
+  --pink: #FF9AD5;
+
+  --dark-100: #171725;
+  --dark-90: #44444F;
+  --dark-80: #696974;
+  --dark-70: #92929D;
+  --dark-60: #B5B5BE;
+  --dark-50: #D5D5DC;
+  --dark-40: #E2E2EA;
+  --dark-30: #F1F1F5;
+  --dark-20: #FAFAFB;
+  --dark-0: #FFFFFF;
+
+  --main-gray: #657786;
+  --border-gray: #E6ECF0;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 68px;
+  line-height: 78px;
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 52px;
+}
+
+h3 {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 26px;
+}
+
+h4 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 26px;
+}
+
+h5 {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+}
+
+.fz-base {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+}
+
+.fz-base-bold {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 26px;
+}
+
+.fz-sm {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.fz-sm-bold {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.fz-xs {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+}
+
+.fz-xs-bold {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 20px;
+}
+
+.bg-dark-20 {
+  background-color: var(--dark-20);
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.active {
+  color: var(--main);
+}
+
+.account-name {
+  color: var(--dark-100);
+  &:hover {
+    color: var(--dark-100);
+    text-decoration: underline;
+  }
+}
+
+// reply
+.tag {
+  color: var(--main);
+  &:hover {
+    color: var(--main);
+    text-decoration: underline;
+  }
+}

@@ -1,0 +1,15 @@
+.card {
+  width: 273px;
+}
+
+.cardHeadr {
+  border-radius: 16px 16px 0 0;
+  border-bottom: 1px solid var(--border-gray);
+}
+
+.cardBody {
+  border-radius: 0 0 16px 16px;
+  .list-group-flush>.list-group-item:last-child {
+    border-bottom-width: 0;
+  }
+}
