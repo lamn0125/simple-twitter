@@ -4,11 +4,13 @@
   padding: 0 10%;
   overflow-y: scroll;
   .settingMain {
-    flex: 0.7;
     border-right: 1px solid #e6ecf0;
+    flex: 0.9;
     .settingMain__title {
       padding: 24px 0 24px 20px;
       border-bottom: 1px solid #e6ecf0;
+      font-size: 24px;
+      font-weight: 700;
     }
     .settingMain__content {
       padding: 24px;

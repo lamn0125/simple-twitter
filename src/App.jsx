@@ -26,7 +26,6 @@ function App() {
           <Routes>
             <Route path="main" element={<MainPage />} />
             <Route path="tweet-content" element={<TweetContentPage />} />
-            <Route path="*" element={<MainPage />} />
             <Route path="login" element={<UserLoginPage />} />
             <Route path="register" element={<RegisterPage />} />
             <Route path="admin" element={<AdminLoginPage />} />
@@ -35,6 +34,7 @@ function App() {
             <Route path="setting" element={<Setting />} />
             <Route path="user/self" element={<UserSelfPage />} />
             <Route path="user/other" element={<UserOtherPage />} />
+            <Route path="*" element={<MainPage />} />
           </Routes>
         {/* </AuthProvider> */}
       </BrowserRouter>

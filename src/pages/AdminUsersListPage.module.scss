@@ -6,10 +6,11 @@
   .userPageMain {
     flex: 0.9;
     border-right: 1px solid #e6ecf0;
-
     .userPageMain__title {
       padding: 24px 0 24px 20px;
       border-bottom: 1px solid #e6ecf0;
+      font-size: 24px;
+      font-weight: 700;
     }
     .userPageMain__items {
       display: flex;

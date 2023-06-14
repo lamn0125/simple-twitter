@@ -1,3 +1,7 @@
+.modalContainer {
+  // background-color: #fff;
+}
+
 .modal-content {
   border: 1px red solid;
 }
@@ -30,6 +34,7 @@
 
 .editProfile_body {
   padding: 0;
+  height: auto;
   position: relative;
   .editProfile_body_photo {
     margin-bottom: 80px;
@@ -95,5 +100,6 @@
   }
   .editProfile_body_inputs {
     padding: 1rem;
+    background-color: #fff;
   }
 }

@@ -1,11 +1,15 @@
-import AdminNavbar from "components/AdminNavbar" //之後換成userNavbar
+import UserNavbar from "components/Layout/UserNavbar.jsx" //之後換成userNavbar
 import AuthInput from 'components/AuthInput'
 import style from './Setting.module.scss'
 import { useState } from 'react'
 import Swal from 'sweetalert2';
+import { TweetModal }  from 'components/Modal'
 import { useNavigate } from 'react-router-dom'
 
 function Setting() {
+  const [tweetModalShow, setTweetModalShow] = useState(false)
+  const handleTweetModalShow = () => setTweetModalShow(true)
+  const handleTweetModalClose = () => setTweetModalShow(false)
 
   const navigate = useNavigate()
   const [errorMsg, setErrorMsg] = useState(false)
@@ -78,9 +82,11 @@ function Setting() {
 
   return (
     <div className={style.settingContainer}>
-
-    {/* 之後換成userNavbar */}
-      <AdminNavbar />
+      <div className="nav-container d-flex flex-column justify-content-between pr-4">
+          <UserNavbar
+            handleTweetModalShow={handleTweetModalShow}
+          />
+        </div>
 
       <div className={style.settingMain}>
         <h2 className={style.settingMain__title}>帳戶設定</h2>
@@ -140,6 +146,10 @@ function Setting() {
         <button className={style.settingMain__content_btn}>儲存</button>
       </form>
       </div>
+      <TweetModal
+        isModalShow={tweetModalShow}
+        handleClose={handleTweetModalClose}
+      />
     </div>
   )
 }

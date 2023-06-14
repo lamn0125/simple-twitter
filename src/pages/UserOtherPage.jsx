@@ -1,4 +1,3 @@
-import AdminNavbar from "components/AdminNavbar" //之後換成userNavbar
 import style from './UserPage.module.scss'
 import BackBtn from 'assets/icons/BackBtn.svg'
 import MsgIcon from 'assets/icons/MsgIcon.svg'
@@ -7,8 +6,16 @@ import FakeAvatar from 'assets/images/FakeAvatar.svg'
 import FakeUserProfileBg from 'assets/images/FakeUserProfileBg.svg'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { UserNavbar, PopularList } from "components/Layout"
+import FeatureList from 'components/User/FeatureList'
+import { TweetModal }  from 'components/Modal'
 
 function UserOtherPage() {
+  const navigate = useNavigate()
+
+  const [tweetModalShow, setTweetModalShow] = useState(false)
+  const handleTweetModalShow = () => setTweetModalShow(true)
+  const handleTweetModalClose = () => setTweetModalShow(false)
   //API
    const [isFollowing, setIsFollowing] = useState(false)
 
@@ -24,16 +31,23 @@ function UserOtherPage() {
     setIsFollowing(!isFollowing)
   }
 
+ function handleBackClick(){
+    navigate('/main')
+  }
 
 
   return (
     <>
       <div className={style.userContainer}>
-        <AdminNavbar />
+        <div className="nav-container d-flex flex-column justify-content-between pr-4">
+          <UserNavbar
+            handleTweetModalShow={handleTweetModalShow}
+          />
+        </div>
         <div className={style.userMain}>
 
         <div className={style.userTitle}>
-          <img src={BackBtn} alt="" className={style.userSelfTitleBtn}/>
+          <img src={BackBtn} alt="" className={style.userTitleBtn} onClick={handleBackClick}/>
           <div className={style.userTitle_name}>
             Jane Cathy
             <div className={style.userTitle_postCount}>
@@ -84,12 +98,17 @@ function UserOtherPage() {
               </div>
             </div>
           </div>
+        <FeatureList />
         </div>
 
         </div>
-        {/*  推薦跟隨 */}
+         <PopularList />
 
       </div>
+       <TweetModal
+        isModalShow={tweetModalShow}
+        handleClose={handleTweetModalClose}
+      />
     </>
   )
 }

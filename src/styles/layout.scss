@@ -30,7 +30,6 @@
   height: 100vh;
 }
 
-
 // modal
 .modal-backdrop.show {
   opacity: 0.2;
@@ -45,14 +44,14 @@
     max-width: 490px;
     right: 77px;
   }
-  
+
   .modal-content {
     border-radius: 14px;
   }
 }
 
 .modal-body {
-  padding: 1rem 1.5rem;
+  // padding: 1rem 1.5rem;
   height: 187px;
 
   .form-control {
@@ -76,24 +75,23 @@ input::placeholder {
   font-weight: 400;
   font-size: 16px;
   line-height: 26px;
-  color: #6C757D;
+  color: #6c757d;
 }
 
 .modal-footer {
   border-top: 0;
 }
 
-
 // tab
 .nav-tabs {
   .nav-item {
     flex: none;
-    
+
     &:nth-child(3) {
       .nav-link {
         padding-left: 28px;
         padding-right: 28px;
-      }  
+      }
     }
     .nav-link {
       padding: 15px 50px;
@@ -103,7 +101,7 @@ input::placeholder {
       border: 0;
       color: var(--main-gray);
       background-color: transparent;
-  
+
       &.active {
         border: 0;
         color: var(--main);

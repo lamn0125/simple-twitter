@@ -40,7 +40,7 @@ function EditProfile({show, handleClose}) {
 
   return (
     <div>
-        <Modal show={show} onHide={handleClose}>
+        <Modal show={show} onHide={handleClose} className={style.modalContainer}>
           <Modal.Header>
             <Modal.Title  className={style.editProfile_header}>
               <span onClick={handleClose} className={style.editProfile__closeBtn_Container}>
@@ -65,7 +65,6 @@ function EditProfile({show, handleClose}) {
                 <img src={Camera} alt="" className={style.camera} onClick={handleChangeAvatar}/>
               </div>
             </div>
-
           </div>
           <div className={style.editProfile_body_inputs}>
             <AuthInput

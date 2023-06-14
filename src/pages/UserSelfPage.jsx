@@ -1,4 +1,3 @@
-import AdminNavbar from "components/AdminNavbar" //之後換成userNavbar
 import style from './UserPage.module.scss'
 import BackBtn from 'assets/icons/BackBtn.svg'
 import FakeAvatar from 'assets/images/FakeAvatar.svg'
@@ -6,27 +5,37 @@ import FakeUserProfileBg from 'assets/images/FakeUserProfileBg.svg'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import EditProfile from 'components/EditProfile'
+import { TweetModal }  from 'components/Modal'
 import Modal from 'react-bootstrap/Modal';
+import { UserNavbar, PopularList } from "components/Layout"
+import FeatureList from 'components/User/FeatureList'
 
 
 function UserSelfPage() {
   const navigate = useNavigate()
 
+  const [tweetModalShow, setTweetModalShow] = useState(false)
+  const handleTweetModalShow = () => setTweetModalShow(true)
+  const handleTweetModalClose = () => setTweetModalShow(false)
+
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
-
-
   function handleBackClick(){
-    //修改為回到上一頁
-    navigate('/login')
+    navigate('/main')
   }
 
   return (
     <>
       <div className={style.userContainer}>
-        <AdminNavbar />
+
+        <div className="nav-container d-flex flex-column justify-content-between pr-4">
+          <UserNavbar
+            handleTweetModalShow={handleTweetModalShow}
+          />
+        </div>
+
         <div className={style.userMain}>
 
         <div className={style.userTitle}>
@@ -69,19 +78,22 @@ function UserSelfPage() {
               </div>
             </div>
           </div>
+          <FeatureList />
         </div>
-
         </div>
-        {/*  推薦跟隨 */}
 
         {show && <EditProfile
           handleClose={handleClose}
           show={show}
         />}
 
-
+        <PopularList />
 
       </div>
+      <TweetModal
+        isModalShow={tweetModalShow}
+        handleClose={handleTweetModalClose}
+      />
     </>
   )
 }
