@@ -7,7 +7,8 @@ import {
   AdminTweetListPage,
   AdminUserListPage,
   Setting,
-  UserSelfPage
+  UserSelfPage,
+  UserOtherPage
 } from 'pages'
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
         <Route path="admin/users" element={<AdminUserListPage />} />
         <Route path="setting" element={<Setting />} />
         <Route path="user/self" element={<UserSelfPage />} />
+        <Route path="user/other" element={<UserOtherPage />} />
       </Routes>
     </BrowserRouter>
     </div>

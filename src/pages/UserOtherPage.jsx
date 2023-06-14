@@ -1,27 +1,30 @@
 import AdminNavbar from "components/AdminNavbar" //之後換成userNavbar
 import style from './UserPage.module.scss'
 import BackBtn from 'assets/icons/BackBtn.svg'
+import MsgIcon from 'assets/icons/MsgIcon.svg'
+import NotiIcon from 'assets/icons/NotiIcon.svg'
 import FakeAvatar from 'assets/images/FakeAvatar.svg'
 import FakeUserProfileBg from 'assets/images/FakeUserProfileBg.svg'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import EditProfile from 'components/EditProfile'
-import Modal from 'react-bootstrap/Modal';
 
+function UserOtherPage() {
+  //API
+   const [isFollowing, setIsFollowing] = useState(false)
 
-function UserSelfPage() {
-  const navigate = useNavigate()
-
-  const [show, setShow] = useState(false);
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
-
-
-
-  function handleBackClick(){
-    //修改為回到上一頁
-    navigate('/login')
+  function handleUnFollow(){
+    //API
+    console.log('UnFollow this user')
+    setIsFollowing(!isFollowing)
   }
+
+  function handleFollow(){
+    //API
+    console.log('Follow this user')
+    setIsFollowing(!isFollowing)
+  }
+
+
 
   return (
     <>
@@ -30,11 +33,11 @@ function UserSelfPage() {
         <div className={style.userMain}>
 
         <div className={style.userTitle}>
-          <img src={BackBtn} alt="" className={style.userTitleBtn} onClick={handleBackClick}/>
+          <img src={BackBtn} alt="" className={style.userSelfTitleBtn}/>
           <div className={style.userTitle_name}>
-            John Doe
+            Jane Cathy
             <div className={style.userTitle_postCount}>
-              25
+              45
               <span>推文</span>
             </div>
           </div>
@@ -45,16 +48,28 @@ function UserSelfPage() {
           <img src={FakeAvatar} alt="" className={style.userContent_Avatar}/>
 
           <div className={style.userContent__Btn_Container}>
-            <button
-              onClick={handleShow}
-              className={style.userContent__EditBtn}>
-              編輯個人資料
+
+            <img src={MsgIcon} alt="" className={style.userContent_Icons}/>
+            <img src={NotiIcon} alt="" className={style.userContent_Icons}/>
+
+            {isFollowing ?
+              <button
+              onClick={handleUnFollow}
+              className={style.userContent__FollowBtn}>
+              正在跟隨
+            </button> :
+              <button
+              onClick={handleFollow}
+              className={style.userContent__FollowBtn}>
+              跟隨
             </button>
+            }
+
           </div>
 
           <div className={style.userSelfContent_Info}>
-            <div className={style.userSelfContent_Info_name}>John Doe</div>
-            <div className={style.userSelfContent_Info_detail}>@heyjohn</div>
+            <div className={style.userSelfContent_Info_name}>Jane Cathy</div>
+            <div className={style.userSelfContent_Info_detail}>@iamjane1999</div>
             <div className={style.userSelfContent_desc}>
               Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
             </div>
@@ -74,16 +89,9 @@ function UserSelfPage() {
         </div>
         {/*  推薦跟隨 */}
 
-        {show && <EditProfile
-          handleClose={handleClose}
-          show={show}
-        />}
-
-
-
       </div>
     </>
   )
 }
 
-export default UserSelfPage
+export default UserOtherPage
