@@ -31,8 +31,10 @@ function AdminNavbar({currentPage}) {
       navigate('/admin/users')
     }
     if (text === "登出") {
-      // add logout function
-      navigate('/login')
+      localStorage.removeItem('token');
+      localStorage.removeItem('id');
+      localStorage.removeItem('role');
+      navigate('/login');
     }
   }
 
