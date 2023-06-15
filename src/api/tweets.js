@@ -29,15 +29,16 @@ export const getTweets = async () => {
   }
 }
 
-// export const createTweet = async (payload) => {
-//   // 透過解構來提取屬性值
-//   const { title } = payload;
-//   try {
-//     const res = await axiosInstance.post(`${baseURL}/todos`, {
-//       title,
-//     });
-//     return res.data;
-//   } catch (error) {
-//     console.error('[Create Tweet failed]: ', error);
-//   }
-// };
+export const createTweet = async (payload) => {
+  // 透過解構來提取屬性值
+  const { id, userId, description, createdAt } = payload;
+  try {
+    const res = await axiosInstance.post(`${baseURL}/tweets`, {
+      id, userId, description, createdAt
+    });
+    console.log('data', res.data)
+    return res.data;    
+  } catch (error) {
+    console.error('[Create Tweet failed]: ', error);
+  }
+}

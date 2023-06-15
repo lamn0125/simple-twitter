@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { getTweets } from '../api/tweets'
+import { getTweets, createTweet } from '../api/tweets'
 import { UserNavbar, PopularList } from 'components/Layout'
 import { TweetModal, ReplyModal }  from 'components/Modal'
 import MainContent from 'components/Main/MainContent'
@@ -30,7 +30,7 @@ const MainPage = () => {
     setErrorMsg('')
   }
 
-  // 推文輸入驗證
+  // 推文驗證
   const handleTweetInput = (e) => {
     setInputValue(e.target.value)
 
@@ -41,13 +41,36 @@ const MainPage = () => {
     } else {
       setErrorMsg('')
     }
-
   }
 
-  // 點擊推文按鈕
-  const handleTweetBtn = () => {
+  
+  // 新增推文
+  const handleTweetBtn = async () => {
     if (inputValue.trim().length === 0) {
       setErrorMsg('內容不可空白')
+      return
+    }
+
+    try {
+      // 推文資料存入後端資料庫
+      const data = await createTweet({
+        description: inputValue,
+      })
+
+      setTweets((prevTweets) => {
+        return [
+          {
+            id: data.id,
+            userId: data.userId,
+            description: data.description,
+            createdAt: data.createdAt
+          },
+          ...prevTweets
+        ]
+      })
+      setInputValue('')
+    } catch (error) {
+      console.error(error)
     }
   }
 

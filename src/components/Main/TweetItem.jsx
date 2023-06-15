@@ -24,7 +24,7 @@ const TweetItem = ({ handleReplyModalShow, tweet }) => {
               <button className="btn p-0 mr-3" onClick={handleReplyModalShow}>
                 <ReplyIcon className="text-secondary" />
                 <span className="reply-icon ml-2">
-                  13
+                  {tweet.replyCount}
                 </span>
               </button>
               <button className="btn p-0 ml-4">

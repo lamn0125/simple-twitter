@@ -1,12 +1,17 @@
 import TweetItem from 'components/Main/TweetItem'
 
 const TweetCollection = ({ handleReplyModalShow, tweets }) => {
+  // console.log(tweets)
   return(
     <div>
-      <TweetItem
-        handleReplyModalShow={handleReplyModalShow}
-        tweets={tweets}
-      />
+      {tweets.map((tweet) => {
+        return (
+          <TweetItem
+            handleReplyModalShow={handleReplyModalShow}
+            tweet={tweet}
+          />
+        )
+      })}
     </div>
   )
 }
