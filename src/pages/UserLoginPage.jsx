@@ -1,15 +1,17 @@
 import AuthInput from 'components/AuthInput.jsx'
 import { useContext, useEffect, useState } from 'react'
 import logo from 'assets/icons/logo.svg'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import style from './UserLoginPage.module.scss'
 import Swal from 'sweetalert2';
+import { login } from 'api/auth'
 
 function UserLoginPage() {
+  const navigate = useNavigate()
   const [account, setAccount] = useState('');
   const [password, setPassword] = useState('');
 
-  function handleSubmit(e) {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (
       !account.trim() ||
@@ -24,8 +26,35 @@ function UserLoginPage() {
         showConfirmButton: false,
       });
       return
-    }
+    } else {
+      const { token, id, role} = await login({
+        account,
+        password,
+      });
+      if (token && role === 'user') {
+        localStorage.setItem('token', token)
+        localStorage.setItem('id', id)
+        localStorage.setItem('role', role)
+        Swal.fire({
+          position: 'top',
+          title: '登入成功',
+          timer: 1500,
+          icon: 'success',
+          showConfirmButton: false,
+        });
+        navigate('/main')
+      } else {
+        Swal.fire({
+          position: 'top',
+          title: '帳號或密碼輸入錯誤！',
+          timer: 1500,
+          icon: 'error',
+          showConfirmButton: false,
+        });
+      }
+    };
   }
+
 
 
   return (

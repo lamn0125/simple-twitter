@@ -2,14 +2,17 @@ import AuthInput from 'components/AuthInput.jsx'
 import style from './UserLoginPage.module.scss'
 import { useContext, useEffect, useState } from 'react'
 import logo from 'assets/icons/logo.svg'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import Swal from 'sweetalert2';
+import { adminLogin } from 'api/auth'
+
 
 function AdminLoginPage() {
+  const navigate = useNavigate()
   const [account, setAccount] = useState('');
   const [password, setPassword] = useState('');
 
-  function handleSubmit(e) {
+  const handleSubmit = async(e) => {
     e.preventDefault();
     if (
       !account.trim() ||
@@ -24,6 +27,33 @@ function AdminLoginPage() {
         showConfirmButton: false,
       });
       return
+    } else {
+      const {token, id, role} = await adminLogin({
+        account,
+        password,
+      });
+       if (token && role === 'admin') {
+        localStorage.setItem('token', token)
+        localStorage.setItem('id', id)
+        localStorage.setItem('role', role)
+        Swal.fire({
+          position: 'top',
+          title: '登入成功',
+          timer: 1500,
+          icon: 'success',
+          showConfirmButton: false,
+        });
+        navigate('/admin/tweets')
+      } else {
+        Swal.fire({
+          position: 'top',
+          title: '帳號或密碼輸入錯誤！',
+          timer: 1500,
+          icon: 'error',
+          showConfirmButton: false,
+        });
+      }
+
     }
   }
 
@@ -54,7 +84,7 @@ function AdminLoginPage() {
       </form>
       <div>
         <div className={style.links}>
-          <Link to="/register" className={style.linkItem}>前台登入</Link>
+          <Link to="/login" className={style.linkItem}>前台登入</Link>
         </div>
       </div>
     </div>
