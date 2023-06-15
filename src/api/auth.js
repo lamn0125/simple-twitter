@@ -25,6 +25,37 @@ export const login = async ({ account, password }) => {
 };
 
 // Register API
+export const register = async ({
+  account,
+  name,
+  email,
+  password,
+  checkPassword,
+}) => {
+  try {
+    const { data }  = await axios.post(`${authURL}/users`, {
+      account,
+      name,
+      email,
+      password,
+      checkPassword,
+    })
+
+    // console.log(data);
+
+    const user = data.user
+    if (user) {
+      return { ...data }
+    }
+    return data
+
+  } catch (error) {
+    const errorMessage = error.response.message
+    console.error('[Register Failed]:', error.response.message)
+    return { errorMessage }
+  }
+}
+
 
 // Admin Login API
 export const adminLogin = async ({ account, password }) => {
@@ -33,14 +64,9 @@ export const adminLogin = async ({ account, password }) => {
       account,
       password,
     });
-
-    console.log(data)
-
     const id = data.data.admin.id
     const role = data.data.admin.role
     const token = data.data.token
-
-    console.log(id, role, token)
     if (token) {
       return { id, token, role }
     }

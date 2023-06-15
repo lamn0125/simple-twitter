@@ -12,6 +12,13 @@ function AdminLoginPage() {
   const [account, setAccount] = useState('');
   const [password, setPassword] = useState('');
 
+  useEffect(() => {
+    const token = localStorage.getItem('token')
+    if (token) {
+      navigate('/admin/tweetList')
+    }
+  }, [navigate])
+
   const handleSubmit = async(e) => {
     e.preventDefault();
     if (

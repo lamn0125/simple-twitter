@@ -2,24 +2,27 @@ import AuthInput from 'components/AuthInput.jsx'
 import style from './UserLoginPage.module.scss'
 import { useContext, useEffect, useState } from 'react'
 import logo from 'assets/icons/logo.svg'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import Swal from 'sweetalert2';
+import { register } from 'api/auth'
 
 function RegisterPage() {
+  const navigate = useNavigate()
   const [account, setAccount] = useState('');
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [recheckPassword, setRecheckPassword] = useState('');
+  const [checkPassword, setCheckPassword] = useState('');
 
-  function handleSubmit(e){
+  const handleSubmit = async(e) => {
+
     e.preventDefault();
     if (
       !account.trim() ||
       !name.trim()||
       !email.trim() ||
       !password.trim() ||
-      !recheckPassword.trim()
+      !checkPassword.trim()
     )
     {
       Swal.fire({
@@ -34,7 +37,7 @@ function RegisterPage() {
     if (account.length > 50 || name.length > 50) {
       return;
     }
-    if(password !== recheckPassword) {
+    if(password !== checkPassword) {
       Swal.fire({
         position: 'top',
         title: '密碼不一致',
@@ -43,12 +46,35 @@ function RegisterPage() {
         showConfirmButton: false,
       });
       return
+    } else {
+        const { user } = await register({
+        name,
+        email,
+        account,
+        password,
+        checkPassword,
+      })
+      console.log(user)
+      if (user){
+        Swal.fire({
+          position: 'top',
+          title: '註冊成功',
+          timer: 2000,
+          icon: 'success',
+          showConfirmButton: false,
+        });
+        navigate('/login')
+      } else {
+        Swal.fire({
+          position: 'top',
+          title: 'Email或帳號已註冊, 註冊失敗',
+          timer: 2500,
+          icon: 'error',
+          showConfirmButton: false,
+        });
+      }
     }
 
-    //串接api
-    console.log(account,name, email, password, recheckPassword)
-    // 註冊成功
-    // 註冊失敗
   }
 
   return (
@@ -99,11 +125,11 @@ function RegisterPage() {
         <AuthInput
           label="密碼確認"
           type="password"
-          value={recheckPassword}
-          name={recheckPassword}
+          value={checkPassword}
+          name={checkPassword}
           placeholder="請再次輸入密碼"
           onChange={(e) => {
-            setRecheckPassword(e.target.value)
+            setCheckPassword(e.target.value)
           }}
         />
         <button  className={style.btn}>註冊</button>
