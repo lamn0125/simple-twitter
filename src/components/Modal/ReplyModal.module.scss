@@ -7,7 +7,12 @@
   position: absolute;
   width: 2px;
   height: 86px;
-  left: 48px;
+  left: 40px;
   top: 82px;
   background: var(--dark-60);
+
+  @media (max-width: 1199px) {
+    height: 111px;
+    top: 82px;
+  }
 }

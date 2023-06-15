@@ -134,3 +134,11 @@ a:hover {
     text-decoration: underline;
   }
 }
+
+// modal
+.errMsg {
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 15px;
+  color: var(--error);
+}

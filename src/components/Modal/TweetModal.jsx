@@ -2,7 +2,7 @@ import { Button, Modal, InputGroup, Form } from 'react-bootstrap'
 import { ReactComponent as CloseIcon } from 'assets/icons/icon_tweet_xs_close@x1.svg'
 import UserAvatar from 'assets/images/Photo@1x.svg'
 
-const TweetModal = ({ isModalShow, handleClose }) => {
+const TweetModal = ({ isModalShow, handleClose, inputValue, errorMsg, handleTweetInput, handleTweetBtn }) => {
   return(   
     <Modal show={isModalShow} onHide={handleClose}>
       <Modal.Header>
@@ -13,19 +13,23 @@ const TweetModal = ({ isModalShow, handleClose }) => {
 
       <Modal.Body>
         <div className="d-flex">
-          <div>
+          <div className="mr-2">
             <a href="/">
               <img src={UserAvatar} alt="avatar" />
             </a>               
           </div>
           <InputGroup>
-            <Form.Control as="textarea" aria-label="With textarea" placeholder="有什麼新鮮事？" />
+            <Form.Control as="textarea" aria-label="With textarea" placeholder="有什麼新鮮事？" 
+              value={inputValue}
+              onChange={handleTweetInput}
+            />
           </InputGroup>            
         </div> 
       </Modal.Body>
 
       <Modal.Footer>
-        <Button className="btn tweet-sm-btn btn-brand">推文</Button>
+        {errorMsg && <p className="errMsg mr-3">{errorMsg}</p>}
+        <Button className="btn tweet-sm-btn btn-brand" onClick={handleTweetBtn}>推文</Button>
       </Modal.Footer>
     </Modal>
   )

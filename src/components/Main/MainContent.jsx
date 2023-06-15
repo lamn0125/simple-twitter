@@ -7,9 +7,7 @@ const MainContent = ({ handleTweetModalShow, handleReplyModalShow }) => {
     <>
       <Header />
       <TweetInput 
-        // isModalShow={isModalShow}
         handleTweetModalShow={handleTweetModalShow}
-        // handleClose={handleClose}
       />
       <TweetCollection 
         handleReplyModalShow={handleReplyModalShow}

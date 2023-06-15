@@ -4,7 +4,7 @@ import UserAvatar from 'assets/images/Photo@1x.svg'
 import OtherUserAvatar from 'assets/images/img@1x.svg'
 import styles from 'components/Modal/ReplyModal.module.scss'
 
-const ReplyModal = ({ isModalShow, handleClose }) => {
+const ReplyModal = ({ isModalShow, handleClose, inputValue, errorMsg, handleTweetInput, handleTweetBtn }) => {
   return(
     <Modal show={isModalShow} onHide={handleClose}>
       <Modal.Header>
@@ -41,19 +41,23 @@ const ReplyModal = ({ isModalShow, handleClose }) => {
         <div className={styles.modalLine}></div>
 
         <div className="d-flex mt-3">
-          <div>
+          <div className="mr-2">
             <a href="/">
               <img src={UserAvatar} alt="avatar" />
             </a>               
           </div>
           <InputGroup>
-            <Form.Control as="textarea" aria-label="With textarea" placeholder="推你的回覆" />
+            <Form.Control as="textarea" aria-label="With textarea" placeholder="推你的回覆" 
+              value={inputValue}
+              onChange={handleTweetInput}
+            />
           </InputGroup>            
         </div> 
       </Modal.Body>
 
       <Modal.Footer>
-        <Button className="btn tweet-sm-btn btn-brand">回覆</Button>
+        {errorMsg && <p className="errMsg mr-3">{errorMsg}</p>}
+        <Button className="btn tweet-sm-btn btn-brand" onClick={handleTweetBtn}>回覆</Button>
       </Modal.Footer>
     </Modal>
   )

@@ -51,14 +51,12 @@
 }
 
 .modal-body {
-  // padding: 1rem 1.5rem;
   height: 187px;
 
   .form-control {
+    padding: 1rem 0 0 0;
     height: 187px;
-    resize: none;
-    padding-top: 1rem;
-    padding-left: 0.5rem;
+    resize: none; 
     border: 0;
 
     &:focus {
