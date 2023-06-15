@@ -2,7 +2,7 @@ import Header from 'components/Main/Header'
 import TweetInput from 'components/Main/TweetInput'
 import TweetCollection from 'components/Main/TweetCollection'
 
-const MainContent = ({ handleTweetModalShow, handleReplyModalShow }) => {
+const MainContent = ({ handleTweetModalShow, handleReplyModalShow, tweets }) => {
   return(
     <>
       <Header />
@@ -11,6 +11,7 @@ const MainContent = ({ handleTweetModalShow, handleReplyModalShow }) => {
       />
       <TweetCollection 
         handleReplyModalShow={handleReplyModalShow}
+        tweets={tweets}
       />
     </>
   )

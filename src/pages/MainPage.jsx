@@ -1,4 +1,5 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+import { getTweets } from '../api/tweets'
 import { UserNavbar, PopularList } from 'components/Layout'
 import { TweetModal, ReplyModal }  from 'components/Modal'
 import MainContent from 'components/Main/MainContent'
@@ -7,6 +8,9 @@ const MainPage = () => {
   // Modal輸入內容
   const [inputValue, setInputValue] = useState('')
   const [errorMsg, setErrorMsg] = useState('')
+
+  // const [tweet, setTweet] = useState({})
+  const [tweets, setTweets] = useState([])
 
   /// TweetModal視窗顯示
   const [tweetModalShow, setTweetModalShow] = useState(false)
@@ -47,6 +51,21 @@ const MainPage = () => {
     }
   }
 
+  useEffect(() => {
+    // 取得tweets
+    const getTweetsAsync = async () => {
+      try {
+        const tweets = await getTweets()
+
+        setTweets(tweets.map((tweet) => (
+          {...tweet}
+        )))
+      } catch (error) {
+        console.error(error)
+      }
+    }
+    getTweetsAsync()
+  }, [])
 
   return(
     <div className="container">
@@ -60,6 +79,7 @@ const MainPage = () => {
           <MainContent
             handleTweetModalShow={handleTweetModalShow}
             handleReplyModalShow={handleReplyModalShow}
+            tweets={tweets}
           />
         </div>
         <div className="pl-4">
