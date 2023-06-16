@@ -9,7 +9,6 @@ const MainPage = () => {
   const [inputValue, setInputValue] = useState('')
   const [errorMsg, setErrorMsg] = useState('')
 
-  // const [tweet, setTweet] = useState({})
   const [tweets, setTweets] = useState([])
 
   /// TweetModal視窗顯示
@@ -75,7 +74,7 @@ const MainPage = () => {
   }
 
   useEffect(() => {
-    // 取得tweets
+    // 取得推文
     const getTweetsAsync = async () => {
       try {
         const tweets = await getTweets()

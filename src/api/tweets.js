@@ -8,7 +8,7 @@ const axiosInstance = axios.create({
 
 axiosInstance.interceptors.request.use(
   (config) => {
-    const token = localStorage.getItem('authToken')
+    const token = localStorage.getItem('token')  
     if (token) {
       config.headers['Authorization'] = `Bearer ${token}`
     }
@@ -23,7 +23,9 @@ export const getTweets = async () => {
   try {
     const res = await axiosInstance.get(`${baseURL}/tweets`)
     // 回傳結果
-    return res.data.data
+    console.log(res.data) 
+    return res.data 
+    
   } catch (error) {
     console.error('[Get Tweets failed]: ', error)
   }
