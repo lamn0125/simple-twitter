@@ -10,7 +10,7 @@ import { ReactComponent as Logout } from 'assets/icons/Property 2=outlined, Prop
 import styles from 'components/Layout/UserNavbar.module.scss'
 import { useNavigate, useLocation, Link } from 'react-router-dom'
 
-const UserNavbar = ({ handleTweetModalShow }) => {
+const UserNavbar = ({ toggleTweetModal }) => {
   const navigate = useNavigate()
   const location = useLocation()
 
@@ -41,7 +41,7 @@ const UserNavbar = ({ handleTweetModalShow }) => {
               </li>
             ))}
           </ul>
-          <Button className="btn tweet-btn btn-brand col mt-1" onClick={handleTweetModalShow}>推文</Button>
+          <Button className="btn tweet-btn btn-brand col mt-1" onClick={toggleTweetModal}>推文</Button>
         </div>
       </nav>
       <div className={styles.logoutContainer} onClick={() => handleClick('/login')}>

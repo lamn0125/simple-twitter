@@ -1,7 +1,7 @@
 import { formatDistanceToNow } from 'date-fns'
 import zhTW from 'date-fns/locale/zh-TW'
 
-const ReplyItem = ({ tweetAccount ,comment }) => {
+const ReplyItem = ({ tweetAccount, comment }) => {
   // comment時間格式
   const commentDate = new Date(comment.createdAt)
   const commentDistance = formatDistanceToNow(commentDate, { includeSeconds: true, locale: zhTW })

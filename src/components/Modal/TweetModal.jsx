@@ -2,12 +2,12 @@ import { Button, Modal, InputGroup, Form } from 'react-bootstrap'
 import { ReactComponent as CloseIcon } from 'assets/icons/icon_tweet_xs_close@x1.svg'
 import UserAvatar from 'assets/images/Photo@1x.svg'
 
-const TweetModal = ({ isModalShow, handleClose, inputValue, errorMsg, handleTweetInput, handleTweetBtn }) => {
+const TweetModal = ({ isModalShow, toggleTweetModal, inputValue, errorMsg, handleTweetInput, handleTweetBtn }) => {
   return(   
-    <Modal show={isModalShow} onHide={handleClose}>
+    <Modal show={isModalShow} onHide={toggleTweetModal}>
       <Modal.Header>
         <CloseIcon className="cursor-pointer"
-          onClick={handleClose} 
+          onClick={toggleTweetModal} 
         />  
       </Modal.Header>
 

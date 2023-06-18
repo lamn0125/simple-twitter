@@ -22,11 +22,27 @@ axiosInstance.interceptors.request.use(
 export const getTweets = async () => {
   try {
     const res = await axiosInstance.get(`${baseURL}/tweets`)
-    // 回傳結果
+    // 依時間日期排序
+    res.data.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+    console.log('get Tweet length:', res.data.length)
+    console.log('get Tweet data:', res.data)
     return res.data 
-    
   } catch (error) {
-    console.error('[Get Tweets failed]: ', error)
+    console.error('[Get Tweets failed]:', error)
+  }
+}
+
+export const createTweet = async (payload) => {
+  // 透過解構來提取屬性值
+  const { id, userId, description, createdAt } = payload;
+  try {
+    const res = await axiosInstance.post(`${baseURL}/tweets`, {
+      id, userId, description, createdAt
+    })
+    console.log('create Tweet data:', res.data)
+    return res.data
+  } catch (error) {
+    console.error('[Create Tweet failed]:', error)
   }
 }
 
@@ -39,15 +55,14 @@ export const getComments = async (id) => {
   }
 }
 
-export const createTweet = async (payload) => {
-  // 透過解構來提取屬性值
-  const { id, userId, description, createdAt } = payload;
-  try {
-    const res = await axiosInstance.post(`${baseURL}/tweets`, {
-      id, userId, description, createdAt
-    })
-    return res.data;    
-  } catch (error) {
-    console.error('[Create Tweet failed]: ', error)
-  }
-}
+
+// 刪除推文功能
+// export const deleteTweet = async (delID) => {
+//   try {
+//     const res = await axiosInstance.delete(`${baseURL}/tweets/${delID}`)
+//     console.log('delete Tweet data:', res.data)
+//     return res.data
+//   } catch (error) {
+//     console.error('[Create Tweet failed]:', error)
+//   }
+// }
