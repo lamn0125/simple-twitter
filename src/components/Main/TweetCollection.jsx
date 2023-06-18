@@ -1,18 +1,20 @@
 import TweetItem from 'components/Main/TweetItem'
 
 const TweetCollection = ({ handleReplyModalShow, tweets }) => {
-  // console.log(tweets)
   return(
     <ul className="list-group list-group-flush">
-      {tweets.map((tweet) => {
-        return (
-          <TweetItem
-            key={tweet.id}
-            handleReplyModalShow={handleReplyModalShow}
-            tweet={tweet}
-          />
-        )
-      })}
+      {tweets
+        // 因有缺資料，為避免報錯加上filter
+        .filter((tweet) => tweet.User && tweet.User.avatar)
+        .map((tweet) => {
+          return (
+            <TweetItem
+              key={tweet.id}
+              handleReplyModalShow={handleReplyModalShow}
+              tweet={tweet}
+            />
+          )
+        })}
     </ul>
   )
 }

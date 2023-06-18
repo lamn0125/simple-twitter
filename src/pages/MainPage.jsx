@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { getTweets, createTweet } from '../api/tweets'
+import { getTweets, createTweet } from 'api/tweets'
 import { UserNavbar, PopularList } from 'components/Layout'
 import { TweetModal, ReplyModal }  from 'components/Modal'
 import MainContent from 'components/Main/MainContent'
@@ -41,7 +41,6 @@ const MainPage = () => {
       setErrorMsg('')
     }
   }
-
   
   // 新增推文
   const handleTweetBtn = async () => {
@@ -74,7 +73,7 @@ const MainPage = () => {
   }
 
   useEffect(() => {
-    // 取得推文
+    // 取得所有推文
     const getTweetsAsync = async () => {
       try {
         const tweets = await getTweets()
@@ -100,7 +99,7 @@ const MainPage = () => {
         <div className="main-container">
           <MainContent
             handleTweetModalShow={handleTweetModalShow}
-            handleReplyModalShow={handleReplyModalShow}
+            handleReplyModalShow={handleReplyModalShow}  
             tweets={tweets}
           />
         </div>

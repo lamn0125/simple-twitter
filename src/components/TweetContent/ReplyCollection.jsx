@@ -1,10 +1,19 @@
 import ReplyItem from 'components/TweetContent/ReplyItem'
 
-const ReplyCollection = () => {
+const ReplyCollection = ({ tweet, distance, comments, tweetAccount }) => {
+
   return(
-    <div>
-      <ReplyItem />
-    </div>
+    <ul className="list-group list-group-flush">
+      {comments.map((comment) => {
+        return (
+          <ReplyItem    
+            key={comment.id} 
+            tweetAccount={tweetAccount}
+            comment={comment}
+          />
+        )
+      })}  
+    </ul>
   )
 }
 

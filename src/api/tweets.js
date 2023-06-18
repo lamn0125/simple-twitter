@@ -23,11 +23,19 @@ export const getTweets = async () => {
   try {
     const res = await axiosInstance.get(`${baseURL}/tweets`)
     // 回傳結果
-    console.log(res.data) 
     return res.data 
     
   } catch (error) {
     console.error('[Get Tweets failed]: ', error)
+  }
+}
+
+export const getComments = async (id) => {
+  try {
+    const res = await axiosInstance.get(`${baseURL}/tweets/${id}/replies`)
+    return res.data 
+  } catch (error) {
+    console.error('[Get Comments failed]: ', error)
   }
 }
 
@@ -37,10 +45,9 @@ export const createTweet = async (payload) => {
   try {
     const res = await axiosInstance.post(`${baseURL}/tweets`, {
       id, userId, description, createdAt
-    });
-    console.log('data', res.data)
+    })
     return res.data;    
   } catch (error) {
-    console.error('[Create Tweet failed]: ', error);
+    console.error('[Create Tweet failed]: ', error)
   }
 }
